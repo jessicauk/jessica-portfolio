@@ -1,6 +1,7 @@
 angular.module('portfolioApp',['ui.router'])
 	.run(function ($rootScope) {
 		$rootScope.mensaje = "Angular tools";
+		$scope.saluda = ['H','O','L','A'];
 	})
 	.config( function ( $locationProvider, $stateProvider, $urlRouterProvider ) {
 		$urlRouterProvider.otherwise("/")
