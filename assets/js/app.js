@@ -1,5 +1,5 @@
 angular.module('portfolioApp',['ui.router'])
-	.run(function ($rootScope) {
+	.run(function ($rootScope, $scope) {
 		$rootScope.mensaje = "Angular tools";
 		$scope.saluda = ['H','O','L','A'];
 	})
@@ -9,7 +9,8 @@ angular.module('portfolioApp',['ui.router'])
 			.state('layout', {
 				url : '/',
 				views : {
-					"header" : {templateUrl : "assets/templates/header.html"}
+					"header" : {templateUrl : "assets/templates/header.html"},
+					"footer" : {templateUrl : "assets/templates/footer.html"}
 				}
 			})
 				.state('about', {
