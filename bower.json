@@ -1,0 +1,25 @@
+{
+  "name": "jessicauk",
+  "homepage": "https://github.com/jessicauk/jessicauk",
+  "authors": [
+    "japolinar <jessica.uk220691@gmail.com>"
+  ],
+  "description": "my web project",
+  "main": "",
+  "license": "MIT",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "stylus": "^0.54.2",
+    "angular": "^1.5.5",
+    "karma": "^0.4.6",
+    "angular-ui-router": "^0.2.18"
+  }
+}
