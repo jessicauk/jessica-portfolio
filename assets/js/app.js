@@ -15,7 +15,7 @@ angular.module('portfolioApp',['ui.router'])
 			})
 				.state('about', {
 					url: '/about',
-					templateUrl: 'assets/templates/about.html',
+					templateUrl: "assets/templates/about.html",
 					controller: function ($scope) {
 						$scope.works = ['Everis México', 'Morton Casa de Subastas', 'Global Human Services'];
 					}
