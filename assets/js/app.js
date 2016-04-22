@@ -3,16 +3,12 @@ angular.module('portfolioApp',['ui.router'])
 		$rootScope.mensaje = "Angular tools";
 	})
 	.config( function ( $locationProvider, $stateProvider, $urlRouterProvider ) {
-		$locationProvider.html5Mode({
-			enabled: true,
-  			requireBase: false
-		});
-		//$urlRouterProvider.otherwise("/index")
+		$urlRouterProvider.otherwise("/")
 		$stateProvider
-			.state('index', {
-				url : '',
+			.state('layout', {
+				url : '/',
 				views : {
-					"header" : {templateUrl : "../templates/header.html"}
+					"header" : {template : "../templates/header.html"}
 				}
 			})
 				.state('about', {
