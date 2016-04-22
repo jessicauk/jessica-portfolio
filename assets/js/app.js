@@ -9,12 +9,13 @@ angular.module('portfolioApp',['ui.router'])
 			.state('layout', {
 				url : '/',
 				views : {
-					"header" : {templateUrl : "assets/templates/header.html"}
+					"header" : {templateUrl : "assets/templates/header.html"},
+					"footer" : {templateUrl : "assets/templates/footer.html"}
 				}
 			})
 				.state('about', {
 					url: '/about',
-					templateUrl: '../templates/about.html',
+					templateUrl: 'assets/templates/about.html',
 					controller: function ($scope) {
 						$scope.works = ['Everis México', 'Morton Casa de Subastas', 'Global Human Services'];
 					}
