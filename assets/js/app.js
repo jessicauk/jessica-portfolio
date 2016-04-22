@@ -8,7 +8,7 @@ angular.module('portfolioApp',['ui.router'])
 			.state('layout', {
 				url : '/',
 				views : {
-					"header" : {templateUrl : "prueba.html"}
+					"header" : {templateUrl : "assets/templates/header.html"}
 				}
 			})
 				.state('about', {
