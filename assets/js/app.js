@@ -6,19 +6,32 @@ angular.module('portfolioApp',['ui.router'])
 	.config( function ( $locationProvider, $stateProvider, $urlRouterProvider ) {
 		$urlRouterProvider.otherwise("/")
 		$stateProvider
-			.state('layout', {
+			.state('index', {
 				url : '/',
 				views : {
-					"header" : {templateUrl : "assets/templates/header.html"},
-					"footer" : {templateUrl : "assets/templates/footer.html"}
+					'@': {
+						templateUrl : 'index.html',
+						controller: ''
+					},
+					'header@index' : {templateUrl: 'assets/templates/header.html'},
+					'footer@index' : {templateUrl: 'assets/templates/footer.html'},
 				}
 			})
-				.state('about', {
-					url: '/about',
+				.state('index.about', {
+					url: 'about',
 					templateUrl: "assets/templates/about.html",
-					controller: function ($scope) {
-						$scope.works = ['Everis México', 'Morton Casa de Subastas', 'Global Human Services'];
-					}
+					controller: ''
+				})
+				.state('index.work', {
+					url: 'work',
+					templateUrl: "assets/templates/work.html",
+					controller: ''
+				})
+
+				.state('index.contact', {
+					url: 'contact',
+					templateUrl: "assets/templates/contact.html",
+					controller: ''
 				})
 
 	})

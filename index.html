@@ -8,7 +8,7 @@
 </head>
 <body ng-app="portfolioApp">
 	<div ui-view="header" class="layout-header"></div>
-	<div class="layout-content">{{mensaje}}</div>
+	<div class="layout-content" ui-view>{{mensaje}}</div>
 	<div ui-view="footer" class="layout-footer"></div>
 </body>
 <script src="bower_components/angular/angular.min.js"></script>
