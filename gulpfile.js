@@ -25,7 +25,7 @@ gulp.src('assets/js/*.js')
 *Configuración de la tarea 'css'
 */
 gulp.task('css', function () {
-  return gulp.src('assets/stylus/import.styl')
+  return gulp.src('assets/css/stylus/import.styl')
     .pipe(stylus({compress:true}))
     .pipe(gulp.dest('assets/build/'));
 });
@@ -36,5 +36,5 @@ gulp.task('css', function () {
 */
 gulp.task('watch', function() {
 	gulp.watch('assets/js/*.js', ['js']);
-	gulp.watch('assets/stylus/*.styl', ['css']);
+	gulp.watch('assets/css/stylus/*.styl', ['css']);
 });
