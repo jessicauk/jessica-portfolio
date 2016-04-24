@@ -35,6 +35,6 @@ gulp.task('css', function () {
 *Configuración de la tarea watch que se ejecutan al detectar cambios en los archivos
 */
 gulp.task('watch', function() {
-	gulp.watch('assets/js/*.js', ['js']);
+	//gulp.watch('assets/js/*.js', ['js']);
 	gulp.watch('assets/css/stylus/*.styl', ['css']);
 });

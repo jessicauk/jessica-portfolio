@@ -7,11 +7,9 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 </head>
 <body ng-app="portfolioApp">
-	<div ui-view="header" class="layout-header"></div>
-	<div class="layout-content" ui-view>{{mensaje}}</div>
-	<div ui-view="footer" class="layout-footer"></div>
+	<div ui-view></div>
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="assets/js/app.js"></script>
 </body>
-<script src="bower_components/angular/angular.min.js"></script>
-<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-<script src="assets/js/app.js"></script>
 </html>

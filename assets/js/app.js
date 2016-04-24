@@ -10,11 +10,11 @@ angular.module('portfolioApp',['ui.router'])
 				url : '/',
 				views : {
 					'@': {
-						templateUrl : 'index.html',
+						templateUrl : 'assets/templates/layout.html',
 						controller: ''
 					},
 					'header@index' : {templateUrl: 'assets/templates/header.html'},
-					'footer@index' : {templateUrl: 'assets/templates/footer.html'},
+					'footer@index' : {templateUrl: 'assets/templates/footer.html'}
 				}
 			})
 				.state('index.about', {
