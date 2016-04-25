@@ -38,7 +38,32 @@ html
 				max-width: 1920px
 				margin: 0px auto
 				width: 100%
-				
+				position: relative
+				-webkit-background-size: cover
+				-moz-background-size: cover
+				-o-background-size: cover
+				background-size: cover
+				article
+					padding: 100px
+					h1
+						color: #FFF
+						font-weight: bold
+						text-align: center
+				.section-image
+					background: url('../images/octocat.png')
+					display: block
+					height : 350px
+					margin: 0 auto
+					width: 350px
+					-webkit-background-size: cover
+					-moz-background-size: cover
+					-o-background-size: cover
+					background-size: cover
+			#section1, #section2
+				box-shadow: 0 0 75px rgba(255, 197, 3, 0.4)
+				-webkit-box-shadow:  0 0 75px rgba(255, 197, 3, 0.4)
+				-moz-box-shadow:  0 0 75px rgba(255, 197, 3, 0.4)
+				-o-box-shadow: 0 0 75px rgba(255, 197, 3, 0.4)
 		.layout-footer
 			width: 100%
 			min-height: 40px
@@ -46,8 +71,7 @@ html
 			bottom: 0
 			left: 0
 			right: 0
-			z-index: 1
-			position: fixed
+			margin: 0
 			.text
 				color: #FFF
 				margin: 0 auto

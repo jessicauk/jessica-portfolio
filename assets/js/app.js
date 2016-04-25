@@ -1,9 +1,9 @@
 angular.module('portfolioApp',['ui.router'])
-	.run(function ($rootScope) {
+	.run(['$rootScope', function ( $rootScope ) {
 		$rootScope.mensaje = "Angular tools";
-		$rootScope.prueba = "Es una pruasbjhdbjhdbeba hjhbjhbjh";
-	})
-	.config( function ( $locationProvider, $stateProvider, $urlRouterProvider ) {
+		$rootScope.prueba = "Es una p";
+	}])
+	.config( [ '$locationProvider', '$stateProvider', '$urlRouterProvider', function ( $locationProvider, $stateProvider, $urlRouterProvider ) {
 		$urlRouterProvider.otherwise("/")
 		$stateProvider
 			.state('index', {
@@ -11,7 +11,7 @@ angular.module('portfolioApp',['ui.router'])
 				views : {
 					'@': {
 						templateUrl : 'assets/templates/layout.html',
-						controller: ''
+						controller: 'mainController'
 					},
 					'header@index' : {templateUrl: 'assets/templates/header.html'},
 					'footer@index' : {templateUrl: 'assets/templates/footer.html'}
@@ -27,14 +27,23 @@ angular.module('portfolioApp',['ui.router'])
 					templateUrl: "assets/templates/work.html",
 					controller: ''
 				})
-
 				.state('index.contact', {
 					url: 'contact',
 					templateUrl: "assets/templates/contact.html",
 					controller: ''
 				})
-
-	})
+	}])
 	.controller('mainController', ['$scope', '$rootScope', '$http', function ( $scope, $rootScope, $http ) {
 		$scope.message = $rootScope.mensaje;
-	}])
+		$(document).ready(function () {
+			$('section[data-type="parallax_section"]').each(function () {
+				var $bgobj = $(this);
+				$(window).scroll(function() {
+					$window = $(window);
+					var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+					var coords = '50%' + yPos + 'px';
+					$bgobj.css({backgroundPosition : coords}); 
+				})
+			});
+		});
+	}]);
