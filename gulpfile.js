@@ -7,7 +7,7 @@ uglify = require('gulp-uglify'),
 stylus = require('gulp-stylus');
 
 /*
-*
+*Configuración de la tarea 'default' la cual ejecuta la tarea 'watch' 
 */
 gulp.task('default', ['watch']);
 /*
