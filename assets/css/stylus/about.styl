@@ -1,0 +1,28 @@
+.about-me
+	#heart
+		position: relative
+		.love-message
+			position: absolute
+			top: 50px
+			left: 46px
+			z-index: 1
+			color: #FFF
+			font-size: 18px;
+			h2
+				font-family: 'Indie Flower', cursive
+		&:after,
+		&:before
+			position: absolute
+			content: ""
+			height: 139px
+			width: 82px
+			background: #F32458
+			margin: 2px 10px
+			transform: rotate(45deg)
+			left: 91px
+			border-radius: 0 10px
+			border-radius: 38px 40px 0 0
+		&:after
+			left: 50px
+			transform: rotate(-45deg)
+			border-radius: 38px 40px 0 0
