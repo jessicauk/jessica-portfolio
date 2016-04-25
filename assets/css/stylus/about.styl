@@ -1,5 +1,5 @@
 .about-me
-	#heart
+	.heart
 		position: relative
 		.love-message
 			position: absolute
@@ -26,3 +26,28 @@
 			left: 50px
 			transform: rotate(-45deg)
 			border-radius: 38px 40px 0 0
+	#octo-cat
+		position: relative
+		width: 120px
+		height: 90px
+		background: #000
+		top: 40px
+		border-radius: 50px
+		margin: 0 auto
+		&:before,
+		&:after
+			width: 43px
+			height: 39px
+			position: absolute
+			top: -6px
+			background: #000
+			content: " "
+			left: 2px
+			border-radius: 73px 5px
+			transform: rotate(-83deg)
+		&:after
+			transform: rotate(171deg)
+			left: 75px
+			
+			
+			
