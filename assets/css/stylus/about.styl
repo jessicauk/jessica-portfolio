@@ -1,7 +1,8 @@
 .about-me
 	.heart
+		display: none
 		position: relative
-		.love-message
+		&__message
 			position: absolute
 			top: 50px
 			left: 46px
@@ -26,13 +27,13 @@
 			left: 50px
 			transform: rotate(-45deg)
 			border-radius: 38px 40px 0 0
-	#octo-cat
+	.octocat
 		position: relative
 		width: 120px
 		height: 90px
 		background: #000
 		top: 40px
-		border-radius: 50px
+		border-radius: 100% 100% 50% 50% /90px
 		margin: 0 auto
 		&:before,
 		&:after
@@ -46,8 +47,97 @@
 			border-radius: 73px 5px
 			transform: rotate(-83deg)
 		&:after
-			transform: rotate(171deg)
+			transform: rotate(83deg)
 			left: 75px
+			border-radius: 5px 73px
 			
+		&__face
+			position: absolute
+			width: 100px
+			height: 50px
+			background: #F4CAB1
+			bottom: 5px
+			border-radius: 50px
+			z-index: 2
+			left: 10px
+			box-shadow: inset 0px 2px 1px rgba(0,0,0,0.2)
+		&__eye
+			width: 18px
+			height: 29px
+			background: #FFF
+			position: absolute
+			top: 42px
+			left: 26px
+			z-index: 3
+			border-radius: 50% 50% / 13px
+			&-right
+				left: 77px
+			&__iris
+				width: 14px
+				height: 20px
+				position: absolute
+				border-radius: 50% 50%
+				background: #AC5C51
+				top: 4px
+				left: 2px
+				&:after
+					content: ""
+					width: 5px
+					height:5px
+					background: #FFF
+					border-radius: 50% 50%
+					position: absolute
+					top: 2px
+					left: 1px
+		&__mouth
+			width: 15px
+			height: 15px
+			position: absolute
+			background: transparent
+			border-radius: 50%
+			//box-shadow: 20px 15px 0 0 #AC5C51
+			border-bottom: 2px solid #ac5c51
+			bottom: 8px
+			left: 54px
+			z-index: 2
+		&__nose
+			width: 6px
+			height: 6px
+			border-radius: 50% 50%
+			background: #AC5C51
+			position: absolute
+			bottom: 16px
+			left: 58px
+			z-index: 2
+		&__mustash
+			width: 64px
+			height: 24px
+			position: absolute
+			top: 64px
+			z-index: 2
+			left: -53px
+			border-radius: 31%
+			border-top: 1px solid #000
+			transform: rotate(-2deg)
+			&:nth-of-type(3)
+				transform: rotate(-20deg)
+				top: 65px
+			&:nth-of-type(4)
+				// transform: rotate(-20deg)
+				top: 57px
+			&:nth-of-type(5)
+				transform: rotate(14deg)
+				top: 65px
+				left: 109px
+			&:nth-of-type(6)
+				transform: rotate(-2deg)
+				top: 57px
+				left: 109px
+				
+			
+		&:hover:after
+			transform-origin: 50% 65%
+		&:hover:before
+			transform-origin: 50% 65%
 			
 			
