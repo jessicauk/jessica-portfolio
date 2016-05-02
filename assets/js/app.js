@@ -1,7 +1,7 @@
-angular.module('portfolioApp',['ui.router'])
+angular.module('portfolioApp',['ui.router','prueba.module'])
 	.run(['$rootScope', function ( $rootScope ) {
 		$rootScope.mensaje = "Angular tools";
-		$rootScope.prueba = "Es una p";
+		$rootScope.prueba = "Es una pruueba";
 	}])
 	.config( [ '$locationProvider', '$stateProvider', '$urlRouterProvider', function ( $locationProvider, $stateProvider, $urlRouterProvider ) {
 		$urlRouterProvider.otherwise("/")
@@ -25,7 +25,7 @@ angular.module('portfolioApp',['ui.router'])
 				.state('index.work', {
 					url: 'work',
 					templateUrl: "assets/templates/work.html",
-					controller: ''
+					controller: 'prueba.controller'
 				})
 				.state('index.contact', {
 					url: 'contact',

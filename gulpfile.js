@@ -14,9 +14,9 @@ gulp.task('default', ['watch']);
 * Configuración de la tarea 'js'
 */
 gulp.task('js', function () {
-	gulp.src('assets/js/*.js')
+	gulp.src('assets/js/**/*.js')
 	.pipe(concat('compilacion.js'))
-	.pipe(uglify())
+	// .pipe(uglify())
 	.pipe(gulp.dest('assets/build/'))
 });
 
@@ -33,6 +33,6 @@ gulp.task('css', function () {
 *Configuración de la tarea watch que se ejecutan al detectar cambios en los archivos
 */
 gulp.task('watch', function() {
-	gulp.watch('assets/js/*.js', ['js']);
+	gulp.watch('assets/js/**/*.js',['js']);
 	gulp.watch('assets/css/stylus/*.styl', ['css']);
 });

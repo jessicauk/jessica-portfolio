@@ -1,1 +1,58 @@
-angular.module("portfolioApp",["ui.router"]).run(["$rootScope",function(t){t.mensaje="Angular tools",t.prueba="Es una p"}]).config(["$locationProvider","$stateProvider","$urlRouterProvider",function(t,e,o){o.otherwise("/"),e.state("index",{url:"/",views:{"@":{templateUrl:"assets/templates/layout.html",controller:"mainController"},"header@index":{templateUrl:"assets/templates/header.html"},"footer@index":{templateUrl:"assets/templates/footer.html"}}}).state("index.about",{url:"about",templateUrl:"assets/templates/about.html",controller:""}).state("index.work",{url:"work",templateUrl:"assets/templates/work.html",controller:""}).state("index.contact",{url:"contact",templateUrl:"assets/templates/contact.html",controller:""})}]).controller("mainController",["$scope","$rootScope","$http",function(t,e,o){t.message=e.mensaje,$(document).ready(function(){$('section[data-type="parallax_section"]').each(function(){var t=$(this);$(window).scroll(function(){$window=$(window);var e=-($window.scrollTop()/t.data("speed")),o="50%"+e+"px";t.css({backgroundPosition:o})})})})}]);
+angular.module('portfolioApp',['ui.router','prueba.module'])
+	.run(['$rootScope', function ( $rootScope ) {
+		$rootScope.mensaje = "Angular tools";
+		$rootScope.prueba = "Es una pruueba";
+	}])
+	.config( [ '$locationProvider', '$stateProvider', '$urlRouterProvider', function ( $locationProvider, $stateProvider, $urlRouterProvider ) {
+		$urlRouterProvider.otherwise("/")
+		$stateProvider
+			.state('index', {
+				url : '/',
+				views : {
+					'@': {
+						templateUrl : 'assets/templates/layout.html',
+						controller: 'mainController'
+					},
+					'header@index' : {templateUrl: 'assets/templates/header.html'},
+					'footer@index' : {templateUrl: 'assets/templates/footer.html'}
+				}
+			})
+				.state('index.about', {
+					url: 'about',
+					templateUrl: "assets/templates/about.html",
+					controller: ''
+				})
+				.state('index.work', {
+					url: 'work',
+					templateUrl: "assets/templates/work.html",
+					controller: 'prueba.controller'
+				})
+				.state('index.contact', {
+					url: 'contact',
+					templateUrl: "assets/templates/contact.html",
+					controller: ''
+				})
+	}])
+	.controller('mainController', ['$scope', '$rootScope', '$http', function ( $scope, $rootScope, $http ) {
+		$scope.message = $rootScope.mensaje;
+		$(document).ready(function () {
+			$('section[data-type="parallax_section"]').each(function () {
+				var $bgobj = $(this);
+				$(window).scroll(function() {
+					$window = $(window);
+					var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+					var coords = '50%' + yPos + 'px';
+					$bgobj.css({backgroundPosition : coords}); 
+				})
+			});
+		});
+	}]);
+angular.module('prueba.module',[])
+	.controller('prueba.controller', ['$scope', '$rootScope', '$http', function ( $scope, $rootScope, $http ) {
+		// $(document).on('ready', function () {
+		//});
+		$(document).ready(function () {
+			alert("ready document!!!!!!!!!!!!");
+			console.log("aqui entro este controller");
+		});
+	}]);
