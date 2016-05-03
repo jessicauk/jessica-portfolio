@@ -13,8 +13,8 @@ angular.module('portfolioApp',['ui.router','prueba.module'])
 						templateUrl : 'assets/templates/layout.html',
 						controller: 'mainController'
 					},
-					'header@index' : {templateUrl: 'assets/templates/header.html'},
-					'footer@index' : {templateUrl: 'assets/templates/footer.html'}
+					'header@index' : {templateUrl: 'assets/templates/header.html',controller: 'mainController'},
+					'footer@index' : {templateUrl: 'assets/templates/footer.html',controller: 'mainController'}
 				}
 			})
 				.state('index.about', {
