@@ -45,6 +45,12 @@ angular.module('portfolioApp',['ui.router','prueba.module'])
 					$bgobj.css({backgroundPosition : coords}); 
 				})
 			});
+			$('#about').on("click", function () {
+				var p = $('#about').position();
+				console.log("-- " + JSON.stringify(p));
+			});
+			//var position = p.position();
+			//$('.color-span').css({"width":"100%", "transition": "color,width 1s linear", "background":"#FCFFCF", "position":"absolute", "left: " + position.left + ", top: " + position.top});
 		});
 	}]);
 angular.module('prueba.module',[])

@@ -1,11 +1,24 @@
+azul-1 = rgba(57,140,255,0.95)
+azul-2 = rgba(57,195,255,0.95)
+azul-3 = rgba(105,210,255,0.95)
+azul-4 = rgba(0,177,254,0.95)
+blanco = #FFF
+gris-body = #f5f7fb
+negro-1 = rgba(30, 29, 29, 0.95)
+purpura-1 = rgba(172,125,255,1)
+purpura-2 = rgba(202,176,248,1)
+rosa-menu = rgba(254, 127,122,0.95)
+rosa-2 = rgba(255, 160,236,1)
+rosa-3 = #F55
 html
 	body
-		background: rgba(228, 213, 227, 0.52)
-		font-family:'Roboto',sans-serif;
+		// background: rgba(228, 213, 227, 0.52)
+		background: gris-body
+		font-family:'Roboto',sans-serif
 		font-weight: 100
 		.layout-header
 			// background: rgba(47, 47, 44, 0.95)
-			background: rgba(102,76,75, 0.95)
+			background: rosa-menu
 			position: fixed
 			top: 0
 			right: 0
@@ -16,16 +29,30 @@ html
 				width: 50%
 				margin: 0 auto
 				ul
+					margin: 10px 0
 					li
 						display: inline-block
 						width: calc(100%/4 - 4px)
 						a
-							color: #FFF
+							color: rosa-3
 							text-decoration: none
 							text-align: center
 							line-height: 40px
-							width: 100%
+							// line-height: 40px
+							margin: 0 auto
+							width: 60%
+							// width: 100%
 							display: block
+							font-weight: 600
+							position: relative
+							&:hover
+								position: relative
+								border-radius: 100% / 100px
+								background: blanco 
+								width: 60%
+								transition: border-radius,background 2s linear 
+							
+								
 		.layout-content
 			display: block
 			min-height: 100vh
@@ -85,16 +112,17 @@ html
 			width: 100%
 			min-height: 40px
 			// background: rgba(47, 47, 44, 0.95)
-			background: rgba(102,76,75, 0.95)
+			background: rosa-menu
 			bottom: 0
 			left: 0
 			right: 0
 			margin: 0
 			.text
-				color: #FFF
+				color: rosa-3
 				margin: 0 auto
 				width: 30%
 				line-height: 40px
+				font-weight: 600
 				p
 					text-align: center
 
