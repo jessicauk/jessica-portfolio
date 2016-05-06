@@ -35,23 +35,12 @@ angular.module('portfolioApp',['ui.router','prueba.module'])
 	}])
 	.controller('mainController', ['$scope', '$rootScope', '$http', function ( $scope, $rootScope, $http ) {
 		$scope.message = $rootScope.mensaje;
-		$(document).ready(function () {
-			$('section[data-type="parallax_section"]').each(function () {
-				var $bgobj = $(this);
-				$(window).scroll(function() {
-					$window = $(window);
-					var yPos = -($window.scrollTop() / $bgobj.data('speed'));
-					var coords = '50%' + yPos + 'px';
-					$bgobj.css({backgroundPosition : coords}); 
-				})
-			});
-			$('#about').on("click", function () {
+		
+			$('#about').on("click", function() {
 				var p = $('#about').position();
-				console.log("-- " + JSON.stringify(p));
+				console.log(JSON.stringify(p));
 			});
-			//var position = p.position();
-			//$('.color-span').css({"width":"100%", "transition": "color,width 1s linear", "background":"#FCFFCF", "position":"absolute", "left: " + position.left + ", top: " + position.top});
-		});
+		
 	}]);
 angular.module('prueba.module',[])
 	.controller('prueba.controller', ['$scope', '$rootScope', '$http', function ( $scope, $rootScope, $http ) {
@@ -62,3 +51,19 @@ angular.module('prueba.module',[])
 			console.log("aqui entro este controller");
 		});
 	}]);
+angular.module('site.module',[])
+	.controller('about.controller', ['$scope', function ($scope) {
+		$scope.technologies = [
+			{id:1, name: "Angular JS", category: "js", img:"angularjs-original"},
+			{id:2, name: "JavaScript", category: "js", img:"angularjs-original"},
+			{id:3, name: "jQuery", category: "js", img:"angularjs-original"},
+			{id:4, name: "HTML5", category: "html", img:"angularjs-original"},
+			{id:5, name: "CSS3", category: "css", img:"angularjs-original"}
+		];
+	}])
+	.controller('work.controller', ['$scope', function ($scope) {
+
+	}])
+	.controller('contact.controller', ['$scope', function ($scope) {
+
+	}])

@@ -1,15 +1,38 @@
+
+amarillo-1 = rgb(249, 237, 145)
 azul-1 = rgba(57,140,255,0.95)
 azul-2 = rgba(57,195,255,0.95)
 azul-3 = rgba(105,210,255,0.95)
 azul-4 = rgba(0,177,254,0.95)
-blanco = #FFF
-gris-body = #f5f7fb
 negro-1 = rgba(30, 29, 29, 0.95)
+negro-2 = rgb(35, 33, 33)
 purpura-1 = rgba(172,125,255,1)
 purpura-2 = rgba(202,176,248,1)
-rosa-menu = rgba(254, 127,122,0.95)
+purpura-3 = rgb(200, 183, 234)
 rosa-2 = rgba(255, 160,236,1)
 rosa-3 = #F55
+rosa-4 = rgb(233, 96, 96)
+verde-1 = rgb(156, 245, 223)
+
+/*
+* Mi palette color
+*/
+
+blanco = #FFF
+gris-body = #f5f7fb
+rosa-menu = rgba(254, 127,122,0.95)
+palette-azul= rgba(57, 195, 255, 0.75)
+palette-rosa1 = rgb(233, 96, 96)
+palette-azul2 = rgba(37, 151, 248, 0.85)
+palette-rosa3 = #f55
+//palette-rosa4 = #FF5555
+palette-gris =  rgba(66, 61, 66, 0.6)
+palette-rosa2 = rgba(255, 0, 45, 0.69)
+palette-negro = rgb(39, 39, 39)
+palette-negro2 = rgb(35, 33, 33)
+palette-verde = #2ee0ae
+
+
 html
 	body
 		// background: rgba(228, 213, 227, 0.52)
@@ -18,12 +41,12 @@ html
 		font-weight: 100
 		.layout-header
 			// background: rgba(47, 47, 44, 0.95)
-			background: rosa-menu
+			background: palette-negro
 			position: fixed
 			top: 0
 			right: 0
 			left: 0
-			z-index: 1
+			z-index: 4
 			min-height: 40px
 			&-menu
 				width: 50%
@@ -45,22 +68,34 @@ html
 							display: block
 							font-weight: 600
 							position: relative
-							&:hover
-								position: relative
-								border-radius: 100% / 100px
-								background: blanco 
-								width: 60%
-								transition: border-radius,background 2s linear 
-							
-								
+							transform: translateZ(0)
+							box-shadow: 0 0 1px rgba(0, 0, 0, 0)
+							backface-visibility: hidden
+							cursor: pointer
+						&:not(:first-child)
+							a
+								&:after
+									content: ""
+									position: absolute
+									z-index: -1
+									right: 100%
+									left: 0
+									bottom: 0
+									height: 4px
+									background: palette-rosa3
+									transition: right 0.3s ease-out
+								&:hover:after					
+									right: 0							
 		.layout-content
 			display: block
 			min-height: 100vh
 			margin-top: 40px
 			#section1
-				background: url('../images/unionjack.jpg') 50% 0 no-repeat fixed
+				// background: url('../images/unionjack.jpg') 50% 0 no-repeat fixed
+				background: #FFF
 			#section2
-				background: url('../images/violin-vs-cello.jpg') 50% 0 no-repeat fixed
+				// background: url('../images/violin-vs-cello.jpg') 50% 0 no-repeat fixed
+				background: #FFF
 				article
 					div
 						-ms-transform: rotate(45deg)
@@ -69,7 +104,8 @@ html
 						-moz-transform: rotate(45deg)
 						transform: rotate(45deg)
 			#section3
-				background: url('../images/paisaje.jpg') 50% 0 no-repeat fixed
+				// background: url('../images/paisaje.jpg') 50% 0 no-repeat fixed
+				background: #FFF
 				article
 					div
 						-ms-transform: rotate(90deg)
@@ -94,7 +130,7 @@ html
 						font-weight: bold
 						text-align: center		
 				.section-image
-					background: url('../images/octocat.png')
+					background: #FFF
 					display: block
 					height : 350px
 					margin: 0 auto
@@ -112,7 +148,7 @@ html
 			width: 100%
 			min-height: 40px
 			// background: rgba(47, 47, 44, 0.95)
-			background: rosa-menu
+			background: palette-negro
 			bottom: 0
 			left: 0
 			right: 0

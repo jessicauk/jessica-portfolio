@@ -35,21 +35,10 @@ angular.module('portfolioApp',['ui.router','prueba.module'])
 	}])
 	.controller('mainController', ['$scope', '$rootScope', '$http', function ( $scope, $rootScope, $http ) {
 		$scope.message = $rootScope.mensaje;
-		$(document).ready(function () {
-			$('section[data-type="parallax_section"]').each(function () {
-				var $bgobj = $(this);
-				$(window).scroll(function() {
-					$window = $(window);
-					var yPos = -($window.scrollTop() / $bgobj.data('speed'));
-					var coords = '50%' + yPos + 'px';
-					$bgobj.css({backgroundPosition : coords}); 
-				})
-			});
-			$('#about').on("click", function () {
+		
+			$('#about').on("click", function() {
 				var p = $('#about').position();
-				console.log("-- " + JSON.stringify(p));
+				console.log(JSON.stringify(p));
 			});
-			//var position = p.position();
-			//$('.color-span').css({"width":"100%", "transition": "color,width 1s linear", "background":"#FCFFCF", "position":"absolute", "left: " + position.left + ", top: " + position.top});
-		});
+		
 	}]);
