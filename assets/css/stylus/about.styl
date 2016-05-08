@@ -36,6 +36,7 @@
 		border-radius: 100% 100% 50% 50% /90px
 		margin: 0 auto
 		display: block
+		animation: gato 5s
 		&:before,
 		&:after
 			width: 43px
@@ -47,10 +48,12 @@
 			left: 2px
 			border-radius: 73px 5px
 			transform: rotate(-83deg)
+			animation: oreja-gato1 0.5s 20
 		&:after
 			transform: rotate(83deg)
 			left: 75px
 			border-radius: 5px 73px
+			animation: oreja-gato2 0.5s 20 
 			
 		&__face
 			position: absolute
@@ -214,6 +217,21 @@
 				margin: 0 5px 0
 				&:before
 					color: #3DBBED
+@keyframes gato
+	from
+		opacity: 0
+	to
+		opacity: 1
+@keyframes oreja-gato2
+	from
+		transform: rotate(83deg)
+	to
+		transform-origin: 50% 65%
+@keyframes oreja-gato1
+	from
+		transform: rotate(-83deg)
+	to
+		transform-origin: 50% 65%
 		
 						
 			 
