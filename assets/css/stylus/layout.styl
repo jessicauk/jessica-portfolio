@@ -35,7 +35,7 @@ palette-verde = #2ee0ae
 
 html
 	body
-		// background: rgba(228, 213, 227, 0.52)
+		background: rgba(228, 213, 227, 0.52)
 		background: gris-body
 		font-family:'Roboto',sans-serif
 		font-weight: 100
@@ -49,6 +49,10 @@ html
 			z-index: 4
 			min-height: 40px
 			&-menu
+				@media screen and (max-width: 1016px) and (min-width: 500px)
+					width: 100%
+				@media screen and (max-width: 499px) and (min-width: 250px)
+					display: none 
 				width: 50%
 				margin: 0 auto
 				ul
@@ -85,7 +89,7 @@ html
 									background: palette-rosa3
 									transition: right 0.3s ease-out
 								&:hover:after					
-									right: 0							
+									right: 0												
 		.layout-content
 			display: block
 			min-height: 100vh
