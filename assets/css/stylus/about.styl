@@ -105,6 +105,11 @@
 			bottom: 8px
 			left: 54px
 			z-index: 2
+		.sad
+			border-top: 2px solid #ac5c51
+			border-radius: 0px
+			transform: rotate(150deg)
+			border-bottom: 0px
 		&__nose
 			width: 6px
 			height: 6px
@@ -234,7 +239,10 @@
 		.description
 			width: 49%
 			display: inline-block
-			vertical-align: middle
+			vertical-align: top
+			@media screen and (max-width: 768px) and (min-width: 300px)
+				width: 100%
+				display: block
 				
 		&:nth-of-type(1)
 			p
