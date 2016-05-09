@@ -14,7 +14,7 @@ angular.module('portfolioApp',['ui.router','prueba.module'])
 						controller: 'mainController'
 					},
 					'header@index' : {templateUrl: 'assets/templates/header.html',controller: 'mainController'},
-					'footer@index' : {templateUrl: 'assets/templates/footer.html',controller: 'mainController'}
+					'footer@index' : {templateUrl: 'assets/templates/footer.html',controller: ''}
 				}
 			})
 				.state('index.about', {
@@ -35,31 +35,28 @@ angular.module('portfolioApp',['ui.router','prueba.module'])
 	}])
 	.controller('mainController', ['$scope', '$rootScope', '$http', function ( $scope, $rootScope, $http ) {
 		$scope.message = $rootScope.mensaje;
-		
-			$('#about').on("click", function() {
-				var p = $('#about').position();
-				console.log(JSON.stringify(p));
-			});
-		
+			$(document).ready(function () {
+				$('#about').on("click", function() {
+					var p = $('#about').position();
+					console.log(JSON.stringify(p));
+				});
+				$('#menu-adapt').on('click', function () {
+					$lista = $('#list-items');
+					$lista.toggle();
+				});
+				$('li').on('click', function () {
+					$('#list-items').hide();
+				})
+			})
+			
 	}]);
 angular.module('prueba.module',[])
 	.controller('prueba.controller', ['$scope', '$rootScope', '$http', function ( $scope, $rootScope, $http ) {
-		// $(document).on('ready', function () {
-		//});
-		$(document).ready(function () {
-			alert("ready document!!!!!!!!!!!!");
-			console.log("aqui entro este controller");
-		});
+		
 	}]);
 angular.module('site.module',[])
 	.controller('about.controller', ['$scope', function ($scope) {
-		$scope.technologies = [
-			{id:1, name: "Angular JS", category: "js", img:"angularjs-original"},
-			{id:2, name: "JavaScript", category: "js", img:"angularjs-original"},
-			{id:3, name: "jQuery", category: "js", img:"angularjs-original"},
-			{id:4, name: "HTML5", category: "html", img:"angularjs-original"},
-			{id:5, name: "CSS3", category: "css", img:"angularjs-original"}
-		];
+		
 	}])
 	.controller('work.controller', ['$scope', function ($scope) {
 

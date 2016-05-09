@@ -14,7 +14,7 @@ angular.module('portfolioApp',['ui.router','prueba.module'])
 						controller: 'mainController'
 					},
 					'header@index' : {templateUrl: 'assets/templates/header.html',controller: 'mainController'},
-					'footer@index' : {templateUrl: 'assets/templates/footer.html',controller: 'mainController'}
+					'footer@index' : {templateUrl: 'assets/templates/footer.html',controller: ''}
 				}
 			})
 				.state('index.about', {
@@ -35,10 +35,18 @@ angular.module('portfolioApp',['ui.router','prueba.module'])
 	}])
 	.controller('mainController', ['$scope', '$rootScope', '$http', function ( $scope, $rootScope, $http ) {
 		$scope.message = $rootScope.mensaje;
-		
-			$('#about').on("click", function() {
-				var p = $('#about').position();
-				console.log(JSON.stringify(p));
-			});
-		
+			$(document).ready(function () {
+				$('#about').on("click", function() {
+					var p = $('#about').position();
+					console.log(JSON.stringify(p));
+				});
+				$('#menu-adapt').on('click', function () {
+					$lista = $('#list-items');
+					$lista.toggle();
+				});
+				$('li').on('click', function () {
+					$('#list-items').hide();
+				})
+			})
+			
 	}]);
