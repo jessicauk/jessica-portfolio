@@ -38,12 +38,11 @@ angular.module('portfolioApp',['ui.router','prueba.module'])
 			$(document).ready(function () {
 				$('#about').on("click", function() {
 					var p = $('#about').position();
-					console.log(JSON.stringify(p));
 				});
-				$('#menu-adapt').on('click', function () {
-					$lista = $('#list-items');
-					$lista.toggle();
-				});
+				// $('#menu-adapt').on('click', function () {
+				// 	$lista = $('#list-items');
+				// 	$lista.toggle();
+				// });
 				$('li').on('click', function () {
 					$('#list-items').hide();
 				})
@@ -58,3 +57,14 @@ angular.module('portfolioApp',['ui.router','prueba.module'])
 				})
 			})	
 	}])
+	.directive('directiveMenuResponsive', function () {
+		return { // 
+			restrict:'A',
+			link: function (scope, element, attrs) {
+				$(element).on('click', function () {
+					$lista = $('#list-items');
+					$lista.toggle();
+				});
+			}
+		}
+	});
