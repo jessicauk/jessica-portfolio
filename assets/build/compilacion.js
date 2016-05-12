@@ -47,9 +47,18 @@ angular.module('portfolioApp',['ui.router','prueba.module'])
 				$('li').on('click', function () {
 					$('#list-items').hide();
 				})
-			})
-			
-	}]);
+				$(window).resize(function () {
+					$sizeBlock = window.matchMedia("(min-width: 500px)");
+					if($sizeBlock.matches) {
+						$('ul').show();
+						console.log("resize");
+					}else{
+						$('ul').hide();
+					}
+				})
+			})	
+	}])
+
 angular.module('prueba.module',[])
 	.controller('prueba.controller', ['$scope', '$rootScope', '$http', function ( $scope, $rootScope, $http ) {
 		
