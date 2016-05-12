@@ -48,7 +48,7 @@ angular.module('portfolioApp',['ui.router','prueba.module'])
 					$('#list-items').hide();
 				})
 				$(window).resize(function () {
-					$sizeBlock = window.matchMedia("(min-width: 500px)");
+					$sizeBlock = window.matchMedia("(min-width: 525px)");
 					if($sizeBlock.matches) {
 						$('ul').show();
 						console.log("resize");
