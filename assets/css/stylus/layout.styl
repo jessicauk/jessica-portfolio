@@ -93,10 +93,8 @@ html
 							text-decoration: none
 							text-align: center
 							line-height: 40px
-							// line-height: 40px
 							margin: 0 auto
 							width: 60%
-							// width: 100%
 							display: block
 							font-weight: 600
 							position: relative
@@ -104,6 +102,13 @@ html
 							box-shadow: 0 0 1px rgba(0, 0, 0, 0)
 							backface-visibility: hidden
 							cursor: pointer
+							@media screen and (max-width: 500px) and (min-width: 300px)
+								&:after
+									display: none
+								&:hover
+									background: palette-rosa3
+									transition: all 0.2s ease-out
+									color: blanco 
 						&:not(:first-child)
 							a
 								&:after

@@ -1,6 +1,55 @@
 .contact
+	padding: 5%
+	h2
+		font-size: 30px
+		color: palette-rosa3		
+		font-family:'Poiret One', cursive;
+		font-weight: 100
 	ul
+		display: block
+		width: 60%
+		margin: 7% auto
+		@media screen and (max-width: 500px) and (min-width: 300px)
+			display: block
 		li
+			height: 60px
+			margin: 10px
+			&:nth-of-type(1)
+				span
+					&:hover
+						color: #00849B
+						transition: color 0.2s ease-in
+			&:nth-of-type(2)
+				a
+					height: auto
+					display: block
+				.name-email
+					line-height: 60px
+					font-size: 20px
+					vertical-align: top
+				span
+					&:hover
+						color: #D44937
+						transition: color 0.2s ease-in
+						cursor: pointer		
+			&:nth-of-type(3)
+				span
+					&:hover
+						color: #323131
+						transition: color 0.2s ease-in
+			&:nth-of-type(4)
+				span
+					&:hover
+						color: #3B579D
+						transition: color 0.2s ease-in
+			
 			a
 				text-decoration: none
+				span
+					color: palette-rosa3
+					font-size: 60px
+					margin-right: 10px
+					
+					
+	
 				

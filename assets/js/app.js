@@ -39,31 +39,25 @@ angular.module('portfolioApp',['ui.router','prueba.module'])
 				$('#about').on("click", function() {
 					var p = $('#about').position();
 				});
-				// $('#menu-adapt').on('click', function () {
-				// 	$lista = $('#list-items');
-				// 	$lista.toggle();
-				// });
-				$('li').on('click', function () {
-					$('#list-items').hide();
-				})
 				$(window).resize(function () {
 					$sizeBlock = window.matchMedia("(min-width: 525px)");
 					if($sizeBlock.matches) {
-						$('ul').show();
+						$('#list-items').show();
 						console.log("resize");
 					}else{
-						$('ul').hide();
+						$('#list-items').hide();
+						$('.description ul').show();
 					}
 				})
 			})	
 	}])
 	.directive('directiveMenuResponsive', function () {
-		return { // 
+		return {  
 			restrict:'A',
 			link: function (scope, element, attrs) {
 				$(element).on('click', function () {
 					$lista = $('#list-items');
-					$lista.toggle();
+					$lista.slideToggle('slow');
 				});
 			}
 		}
