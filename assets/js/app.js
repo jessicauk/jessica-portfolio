@@ -43,10 +43,7 @@ angular.module('portfolioApp',['ui.router','site.module'])
 					$sizeBlock = window.matchMedia("(min-width: 525px)");
 					if($sizeBlock.matches) {
 						$('#list-items').show();
-						console.log("resize");
-						// $('.menu-ul-header li').on('click', function () {
-						// 	$('#list-items').hide();
-						// })
+						console.log("resize");						
 					}else{
 						$('#list-items').hide();
 						$('.description ul').show();
