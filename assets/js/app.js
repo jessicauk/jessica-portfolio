@@ -1,4 +1,4 @@
-angular.module('portfolioApp',['ui.router','prueba.module'])
+angular.module('portfolioApp',['ui.router','site.module'])
 	.run(['$rootScope', function ( $rootScope ) {
 		$rootScope.mensaje = "Angular tools";
 		$rootScope.prueba = "Es una pruueba";
@@ -20,7 +20,7 @@ angular.module('portfolioApp',['ui.router','prueba.module'])
 				.state('index.about', {
 					url: 'about',
 					templateUrl: "assets/templates/about.html",
-					controller: ''
+					controller: 'about.controller'
 				})
 				.state('index.work', {
 					url: 'work',
@@ -44,6 +44,9 @@ angular.module('portfolioApp',['ui.router','prueba.module'])
 					if($sizeBlock.matches) {
 						$('#list-items').show();
 						console.log("resize");
+						// $('.menu-ul-header li').on('click', function () {
+						// 	$('#list-items').hide();
+						// })
 					}else{
 						$('#list-items').hide();
 						$('.description ul').show();

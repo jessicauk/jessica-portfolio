@@ -87,7 +87,7 @@ html
 						margin-top: 0
 					li
 						display: inline-block
-						width: calc(100%/4 - 4px)
+						width: calc(100%/2 - 4px)
 						a
 							color: rosa-3
 							text-decoration: none
@@ -109,7 +109,10 @@ html
 									background: palette-rosa3
 									transition: all 0.2s ease-out
 									color: blanco 
-						&:not(:first-child)
+						//&:not(:first-child)
+						&:nth-of-type(1)
+						&:nth-of-type(2)
+						&:nth-of-type(3)
 							a
 								&:after
 									content: ""

@@ -253,6 +253,11 @@
 				width: 100%
 				min-height: 50px
 				margin: 0 auto
+				#js, #php, #tools, #ctools, #css, #html, #version
+					display: none
+				.npm, .stylus
+					img
+						width: 70%
 				div
 					height: 50px
 					padding: 10px
@@ -266,6 +271,13 @@
 					// box-shadow: 6px 6px 4px #B3B3A6
 					//background: rgba(237, 195, 152, 0.38)
 					&:nth-child(1)
+						.icon-rotate
+							transform: rotate(45deg)
+							transition: .5s 
+						.icon-rotate-reset
+							transform: rotate(0deg)
+							transition: .3s 
+							
 						span
 							&:nth-of-type(1)
 								font-size: 14px
@@ -277,7 +289,6 @@
 							&:nth-of-type(2)
 								width: auto
 								display: inline-block
-								margin-left: 20px
 								float: right
 								cursor: pointer
 					i
