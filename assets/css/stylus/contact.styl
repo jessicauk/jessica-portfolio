@@ -27,12 +27,20 @@
 					line-height: 60px
 					font-size: 20px
 					vertical-align: top
+					@media screen and (max-width: 500px) and (min-width: 300px)
+						font-size: 16px
+						display: block
+						position: absolute
+						left: 85px
 				span
 					&:hover
 						color: #D44937
 						transition: color 0.2s ease-in
 						cursor: pointer		
 			&:nth-of-type(3)
+				a
+					@media screen and (max-width: 500px) and (min-width: 300px)
+						margin-top: 43px
 				span
 					&:hover
 						color: #323131
@@ -45,6 +53,13 @@
 			
 			a
 				text-decoration: none
+				@media screen and (max-width: 500px) and (min-width: 300px)
+					width: 50%
+					display: block
+					margin: 0 auto
+					span
+						display: block
+						margin: 0 auto
 				span
 					color: palette-rosa3
 					font-size: 60px
