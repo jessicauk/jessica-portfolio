@@ -1,5 +1,14 @@
 <section>
 	hi api music
-	<img src="https://commons.wikimedia.org/wiki/File:One_Direction_2013.jpg" alt="onedirection">
-	
+	<article>
+		<input type="text" name="artist" ng-model="artist">
+		<label for="artist">Nombre:</label>
+		<button type="submit" ng-click="searchFor('artist',artist);">Search</button>
+		<div>
+			<img ng-src={{img}} alt="{{name}}">
+			<label for="name">{{artist}}</label>
+			<ul><li ng-repeat="g in genres">{{g}}</li></ul>
+		</div>
+	</article>
+
 </section>

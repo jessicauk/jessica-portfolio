@@ -33,7 +33,7 @@ angular.module('portfolioApp',['ui.router','site.module','services.module', 'mus
 							'contenido' : {
 								templateUrl: 'assets/templates/work/music.html',
 								controller: 'music.controller'
-							}
+							},
 						},
 					})
 				.state('index.contact', {
