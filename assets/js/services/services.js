@@ -1,8 +1,9 @@
 angular.module('services.module',[])
 	.factory('servicesFactory', function ($scope, $http) {
 		return {
-			musicArtist : function (name) {
-				return $http.get('/web');
+			searchItem : function () {
+				//return $http.get(url + '/v1/search?q='+name+'&type='+type);
+				return "hola";
 			}
-		}
+		};
 	})

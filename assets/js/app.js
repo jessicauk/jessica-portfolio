@@ -1,4 +1,4 @@
-angular.module('portfolioApp',['ui.router','site.module','services.module'])
+angular.module('portfolioApp',['ui.router','site.module','services.module', 'music.module'])
 	.run(['$rootScope', function ( $rootScope ) {
 		$rootScope.mensaje = "Angular tools";
 		$rootScope.prueba = "Es una pruueba";
@@ -29,8 +29,12 @@ angular.module('portfolioApp',['ui.router','site.module','services.module'])
 				})
 					.state('index.work.musicApi', {
 						url: '/musicapi',
-						templateUrl: 'assets/templates/work/music.html',
-						controller: ''
+						views: {
+							'contenido' : {
+								templateUrl: 'assets/templates/work/music.html',
+								controller: 'music.controller'
+							}
+						},
 					})
 				.state('index.contact', {
 					url: 'contact',
