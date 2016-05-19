@@ -1,9 +1,8 @@
 angular.module('services.module',[])
-	.factory('servicesFactory', function ($scope, $http) {
+	.factory('servicesFactory', ['$http', function ($http) {
 		return {
-			searchItem : function () {
-				//return $http.get(url + '/v1/search?q='+name+'&type='+type);
-				return "hola";
+			searchItem : function (url, type, artist) {
+				return $http.get(url + '/v1/search?q='+artist+'&type='+type);
 			}
 		};
-	})
+	}]);
