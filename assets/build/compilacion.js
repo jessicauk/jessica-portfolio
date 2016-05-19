@@ -1,4 +1,4 @@
-angular.module('portfolioApp',['ui.router','site.module'])
+angular.module('portfolioApp',['ui.router','site.module','services.module'])
 	.run(['$rootScope', function ( $rootScope ) {
 		$rootScope.mensaje = "Angular tools";
 		$rootScope.prueba = "Es una pruueba";
@@ -25,8 +25,13 @@ angular.module('portfolioApp',['ui.router','site.module'])
 				.state('index.work', {
 					url: 'work',
 					templateUrl: "assets/templates/work.html",
-					controller: 'prueba.controller'
+					controller: 'work.controller'
 				})
+					.state('index.work.musicApi', {
+						url: '/musicapi',
+						templateUrl: 'assets/templates/work/music.html',
+						controller: ''
+					})
 				.state('index.contact', {
 					url: 'contact',
 					templateUrl: "assets/templates/contact.html",
@@ -65,7 +70,7 @@ angular.module('portfolioApp',['ui.router','site.module'])
 
 angular.module('prueba.module',[])
 	.controller('prueba.controller', ['$scope', '$rootScope', '$http', function ( $scope, $rootScope, $http ) {
-		
+		$scope.url = '';
 	}]);
 angular.module('site.module',[])
 	.controller('about.controller', ['$scope', function ($scope) {
@@ -84,3 +89,11 @@ angular.module('site.module',[])
 	.controller('contact.controller', ['$scope', function ($scope) {
 
 	}]);
+angular.module('services.module',[])
+	.factory('servicesFactory', function ($scope, $http) {
+		return {
+			musicArtist : function (name) {
+				return $http.get('/web');
+			}
+		}
+	})
