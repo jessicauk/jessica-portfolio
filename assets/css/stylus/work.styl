@@ -9,13 +9,13 @@
 		min-height: 70vh
 		
 		.block-item
-			min-height: 50px
+			//min-height: 80px
+			height: auto
 			width: 100%
 			margin: 10px auto
 			background: rgba(158, 216, 241, 0.75)
-			&:hover
-				background: palette-azul
-				transition: .5s
+			padding: 10px
+			box-sizing: border-box
 			h1
 				color: blanco
 				text-align:center
@@ -27,10 +27,32 @@
 				&:hover
 					color: palette-gris
 					transition: .3s
+					font-size: 18px
 			.icon-music
 				margin: 10px 5px 0px 0px
 		button
 			background: palette-azul2
-			color: blanco 
+			color: blanco
+			border: 0px
+			border-radius: 3px
+			padding: 5px
+			cursor: pointer
+			position: relative
+			&:after
+				content:""
+				position: absolute
+				background: #156785
+				bottom: -4px
+				height: 5px
+				width: 100%
+				left: 0
+				display: block
+				border-bottom-right-radius: 8px
+				border-bottom-left-radius: 8px
+			&:hover
+				background: rgba(37, 151, 248, 0.58)
+				transition: .3s ease-in-out
+				
+			
 					
 	

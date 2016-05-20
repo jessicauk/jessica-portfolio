@@ -1,9 +1,8 @@
 <section>
-	hi api music
 	<article>
 		<input type="text" name="artist" ng-model="artist">
-		<label for="artist">Nombre:</label>
-		<button type="submit" ng-click="searchFor('artist',artist);">Search</button>
+		<label for="artist">Artist name:</label>
+		<button class="btn" type="submit" ng-click="searchFor('artist',artist);"><span class="icon-search"></span></button>
 		<div>
 			<img ng-src={{img}} alt="{{name}}">
 			<label for="name">{{artistName}}</label>
