@@ -9,7 +9,7 @@
 		min-height: 70vh
 		
 		.block-item
-			//min-height: 80px
+			min-height: 75px
 			height: auto
 			width: 100%
 			margin: 10px auto
@@ -20,6 +20,11 @@
 				color: blanco
 				text-align:center
 				margin: 10px 0px
+			.title-intsructions, .label-search
+				color: #0096C3
+				margin: 10px 0px
+			input
+				padding: 6px 5px
 			a
 				text-decoration: none
 				text-align:center
@@ -27,32 +32,75 @@
 				&:hover
 					color: palette-gris
 					transition: .3s
-					font-size: 18px
+					font-size: 17px
 			.icon-music
 				margin: 10px 5px 0px 0px
 		button
+			padding: 5px
+			font-size: 15px
+			box-shadow: 0px 4px 1px #156785
 			background: palette-azul2
 			color: blanco
-			border: 0px
+			border: none
 			border-radius: 3px
-			padding: 5px
 			cursor: pointer
-			position: relative
-			&:after
-				content:""
-				position: absolute
-				background: #156785
-				bottom: -4px
-				height: 5px
-				width: 100%
-				left: 0
-				display: block
-				border-bottom-right-radius: 8px
-				border-bottom-left-radius: 8px
-			&:hover
-				background: rgba(37, 151, 248, 0.58)
+			text-align: center
+			outline: none
+			&:active
+				background-color: rgba(37, 151, 248, 0.58)
 				transition: .3s ease-in-out
-				
-			
+				transform: translateY(2px)
+				box-shadow: 0 2px #156785
+				// line-height: 3px
+			&:hover
+				background-color: rgba(37, 151, 248, 0.58)
+				transition: .3s ease-in-out
+		.artist-information
+			padding: 20px
+			width: 40%
+			height: 40%
+			margin: 0 auto
+			display: block
+			.artist-name
+				text-align: center
+				font-size: 25px
+				color: blanco
+				margin: 2% 0 5% 0
+			img
+				width: 100%
+				border-radius: 6px	
+			.artist-genre
+				display: block
+				margin: 0 auto
+				li
+					margin: 5px 0px
+					color: #0096C3
+					text-align: center
+			.album-item
+				width: 100%
+				display: block
+				margin: 10px auto
+				height: 50px
+				border-radius: 10px
+				background: blanco
+				box-shadow: 0 0 7px #A29B9B
+				border: 2px solid rgba(47, 173, 228,0.8)
+				cursor: pointer
+				h2
+					color: #0096c3
+					line-height: 50px
+					font-size: 15px
+					margin-left: 10px
 					
+				&:hover
+					background-color: rgba(37,151,248,0.85)
+					transition: background-color 0.3s ease-in-out
+					border: transparent
+					h2
+						color: blanco
+						
+				
+					
+				
+				
 	

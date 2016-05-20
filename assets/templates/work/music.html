@@ -1,12 +1,18 @@
 <section>
 	<article>
+		<h3 class="title-intsructions">Type an artist name.</h3>
+		<label class="label-search" for="artist">Artist name:</label>
 		<input type="text" name="artist" ng-model="artist">
-		<label for="artist">Artist name:</label>
 		<button class="btn" type="submit" ng-click="searchFor('artist',artist);"><span class="icon-search"></span></button>
-		<div>
+		<div class="artist-information">
+			<h4 ng-show="emptyArray" class="artist-name">{{message}}</h4>
+			<h3 class="artist-name">{{artistName}}</h3>
 			<img ng-src={{img}} alt="{{name}}">
-			<label for="name">{{artistName}}</label>
-			<ul><li ng-repeat="g in genres">{{g}}</li></ul>
+			<ul class="artist-genre"><li ng-repeat="g in genres">{{g}}</li></ul>
+			
+			<div ng-if= "!emptyArray" ng-repeat="album in albums" class="album-item">
+				<h2>{{album.name}}</h2>
+			</div>
 		</div>
 		<div class="loader" ng-If="loader">
 			<img src="assets/images/loader.gif">
