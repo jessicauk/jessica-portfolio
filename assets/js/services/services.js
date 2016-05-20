@@ -5,7 +5,7 @@ angular.module('services.module',[])
 				return $http.get(url + '/v1/search?q='+artist+'&type='+type);
 			},
 			albumArtist: function (url, idArtist)  {
-				return $http.get(url +'/v1/artist/'+idArtist+'/albums');
+				return $http.get(url +'/v1/artists/'+idArtist+'/albums');
 			}
 		};
 	}]);

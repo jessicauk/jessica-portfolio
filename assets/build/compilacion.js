@@ -100,7 +100,7 @@ angular.module('services.module',[])
 				return $http.get(url + '/v1/search?q='+artist+'&type='+type);
 			},
 			albumArtist: function (url, idArtist)  {
-				return $http.get(url +'/v1/artist/'+idArtist+'/albums');
+				return $http.get(url +'/v1/artists/'+idArtist+'/albums');
 			}
 		};
 	}]);
@@ -110,10 +110,11 @@ angular.module('music.module', [])
 		$scope.baseUrl ='https://api.spotify.com';
 		$scope.artist="";
 		$scope.type="artist";
-
+		$scope.loader = false;
 		$scope.searchFor = function (type, artist) {
 			servicesFactory.searchItem($scope.baseUrl, type, artist)
 				.success( function (res) {
+					$scope.loader = false;
 					console.log(res.artists.items[0].name);
 					$scope.artista = res.artists.items[0];
 					$scope.img = $scope.artista.images[0].url;

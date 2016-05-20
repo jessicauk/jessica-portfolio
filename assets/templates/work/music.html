@@ -6,8 +6,11 @@
 		<button type="submit" ng-click="searchFor('artist',artist);">Search</button>
 		<div>
 			<img ng-src={{img}} alt="{{name}}">
-			<label for="name">{{artist}}</label>
+			<label for="name">{{artistName}}</label>
 			<ul><li ng-repeat="g in genres">{{g}}</li></ul>
+		</div>
+		<div class="loader" ng-If="loader">
+			<img src="assets/images/loader.gif">
 		</div>
 	</article>
 
