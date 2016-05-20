@@ -6,6 +6,9 @@ angular.module('services.module',[])
 			},
 			albumArtist: function (url, idArtist)  {
 				return $http.get(url +'/v1/artists/'+idArtist+'/albums');
-			}
+			},
+			albumTracks: function (url, idAlbum) {
+				return $http.get(url + '/v1/albums/'+idAlbum +'/tracks');
+			} 
 		};
 	}]);

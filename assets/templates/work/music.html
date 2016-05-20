@@ -4,14 +4,21 @@
 		<label class="label-search" for="artist">Artist name:</label>
 		<input type="text" name="artist" ng-model="artist">
 		<button class="btn" type="submit" ng-click="searchFor('artist',artist);"><span class="icon-search"></span></button>
-		<div class="artist-information">
-			<h4 ng-show="emptyArray" class="artist-name">{{message}}</h4>
+		<h4 ng-show="emptyArray" class="artist-message">{{message}}</h4>
+		<h4 ng-show="fail" class="artist-message">{{failMessage}}</h4>
+		<div ng-if= "!emptyArray" class="artist-information">
 			<h3 class="artist-name">{{artistName}}</h3>
 			<img ng-src={{img}} alt="{{name}}">
 			<ul class="artist-genre"><li ng-repeat="g in genres">{{g}}</li></ul>
 			
-			<div ng-if= "!emptyArray" ng-repeat="album in albums" class="album-item">
+			<div ng-if= "!emptyArray" ng-repeat="album in albums track by $index" class="album-item" ng-click="albumTracks(album.id)">
 				<h2>{{album.name}}</h2>
+				<div ng-if="muestra">
+					<img class="imageAlbum" ng-src="{{album.images[0].url}}" alt="">
+					<ul class="albumTraks">
+						<li ng-repeat="tracks in albumTracks"><span class="icon-music"></span>{{tracks.name}}</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 		<div class="loader" ng-If="loader">

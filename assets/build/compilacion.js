@@ -101,7 +101,10 @@ angular.module('services.module',[])
 			},
 			albumArtist: function (url, idArtist)  {
 				return $http.get(url +'/v1/artists/'+idArtist+'/albums');
-			}
+			},
+			albumTracks: function (url, idAlbum) {
+				return $http.get(url + '/v1/albums/'+idAlbum +'/tracks');
+			} 
 		};
 	}]);
 
@@ -111,6 +114,7 @@ angular.module('music.module', [])
 		$scope.artist="";
 		$scope.type="artist";
 		$scope.loader = false;
+		$scope.fail = false;
 		$scope.searchFor = function (type, artist) {
 			servicesFactory.searchItem($scope.baseUrl, type, artist)
 				.success( function (res) {
@@ -127,20 +131,37 @@ angular.module('music.module', [])
 						$scope.idArtist = $scope.artista.id;
 						$scope.artistName = $scope.artista.name;
 						$scope.artistAlbum($scope.idArtist);
+						$scope.fail = false;
 					}else{
 						$scope.artista = [];
 						$scope.img ="";
 						$scope.genres = [];
 						$scope.artistName ="";
 						$scope.emptyArray = true;
-						//$scope.artist="";
+						$scope.fail = false;
 						$scope.message="Artist not found, try once!";
 					}
 
 				})
 				.error(function (err) {
+					$scope.emptyArray = true;
+					$scope.message = "";
+					$scope.fail = true;
+					$scope.failMessage = "Please, type a name in the box!";
 					console.log("error D:");
 				})
+		};
+		$scope.muestra = false;
+		$scope.albumTracks = function (id) {
+			$scope.muestra = true;
+			servicesFactory.albumTracks($scope.baseUrl, id)
+				.success( function (res) {
+					//console.log("album ok : " + JSON.stringify(res));
+					$scope.albumTracks = res.items;
+				})
+				.error(function (err) {
+					console.log("tracks no : ");
+				}) 
 		};
 
 		$scope.artistAlbum = function (idArtist) {
