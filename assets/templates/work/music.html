@@ -11,10 +11,10 @@
 			<img ng-src={{img}} alt="{{name}}">
 			<ul class="artist-genre"><li ng-repeat="g in genres">{{g}}</li></ul>
 			
-			<div ng-if= "!emptyArray" ng-repeat="album in albums track by $index" class="album-item" ng-click="albumTracks(album.id)">
+			<div ng-if= "!emptyArray" ng-repeat="album in albums track by $index" class="album-item" ng-click="showAll()">
 				<h2>{{album.name}}</h2>
 				<div ng-if="muestra">
-					<img class="imageAlbum" ng-src="{{album.images[0].url}}" alt="">
+					<img class="imageAlbum" ng-src="{{album.images[0].url}}" alt="" ng-click="albumTracks(album.id)">
 					<ul class="albumTraks">
 						<li ng-repeat="tracks in albumTracks"><span class="icon-music"></span>{{tracks.name}}</li>
 					</ul>

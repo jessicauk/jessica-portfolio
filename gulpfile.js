@@ -16,7 +16,7 @@ gulp.task('default', ['watch']);
 gulp.task('js', function () {
 	gulp.src('assets/js/**/*.js')
 	.pipe(concat('compilacion.js'))
-	// .pipe(uglify())
+	.pipe(uglify())
 	.pipe(gulp.dest('assets/build/'))
 });
 

@@ -42,6 +42,9 @@ angular.module('music.module', [])
 				})
 		};
 		$scope.muestra = false;
+		$scope.showAll = function () {
+			$scope.muestra = true;
+		}
 		$scope.albumTracks = function (id) {
 			$scope.muestra = true;
 			servicesFactory.albumTracks($scope.baseUrl, id)
