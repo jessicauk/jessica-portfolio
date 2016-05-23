@@ -1,195 +1,4 @@
 .about-me
-	.heart
-		display: none
-		position: relative
-		&__message
-			position: absolute
-			top: 50px
-			left: 46px
-			z-index: 1
-			color: #FFF
-			font-size: 18px;
-			h2
-				font-family: 'Indie Flower', cursive
-		&:after,
-		&:before
-			position: absolute
-			content: ""
-			height: 139px
-			width: 82px
-			background: #F32458
-			margin: 2px 10px
-			transform: rotate(45deg)
-			left: 91px
-			border-radius: 0 10px
-			border-radius: 38px 40px 0 0
-		&:after
-			left: 50px
-			transform: rotate(-45deg)
-			border-radius: 38px 40px 0 0
-	.octocat
-		position: relative
-		width: 120px
-		height: 90px
-		background: #000
-		top: 180px
-		left: 0
-		border-radius: 100% 100% 50% 50% /90px
-		margin: 0 auto
-		display: block
-		animation: gato 5s
-		@media screen and (max-width: 1125px) and (min-width: 554px)
-			left: 50px		
-		&:before,
-		&:after
-			width: 43px
-			height: 39px
-			position: absolute
-			top: -6px
-			background: #000
-			content: " "
-			left: 2px
-			border-radius: 73px 5px
-			transform: rotate(-83deg)
-			animation: oreja-gato1 0.5s 35
-		&:after
-			transform: rotate(83deg)
-			left: 75px
-			border-radius: 5px 73px
-			animation: oreja-gato2 0.5s 35 
-			
-		&__face
-			position: absolute
-			width: 100px
-			height: 50px
-			background: #F4CAB1
-			bottom: 5px
-			border-radius: 50px
-			z-index: 2
-			left: 10px
-			box-shadow: inset 0px 2px 1px rgba(0,0,0,0.2)
-		&__eye
-			width: 18px
-			height: 29px
-			background: #FFF
-			position: absolute
-			top: 42px
-			left: 26px
-			z-index: 3
-			border-radius: 50% 50% / 13px
-			&-right
-				left: 77px
-			&__iris
-				width: 14px
-				height: 20px
-				position: absolute
-				border-radius: 50% 50%
-				background: #AC5C51
-				top: 4px
-				left: 2px
-				&:after
-					content: ""
-					width: 5px
-					height:5px
-					background: #FFF
-					border-radius: 50% 50%
-					position: absolute
-					top: 2px
-					left: 1px
-		&__mouth
-			width: 15px
-			height: 15px
-			position: absolute
-			background: transparent
-			border-radius: 50%
-			//box-shadow: 20px 15px 0 0 #AC5C51
-			border-bottom: 2px solid #ac5c51
-			bottom: 8px
-			left: 54px
-			z-index: 2
-		.sad
-			border-top: 2px solid #ac5c51
-			border-radius: 0px
-			transform: rotate(150deg)
-			border-bottom: 0px
-		&__nose
-			width: 6px
-			height: 6px
-			border-radius: 50% 50%
-			background: #AC5C51
-			position: absolute
-			bottom: 16px
-			left: 58px
-			z-index: 2
-		&__mustash
-			width: 64px
-			height: 24px
-			position: absolute
-			top: 64px
-			z-index: 2
-			left: -53px
-			border-radius: 31%
-			border-top: 1px solid #000
-			transform: rotate(-2deg)
-			&:nth-of-type(3)
-				transform: rotate(-20deg)
-				top: 65px
-			&:nth-of-type(4)
-				// transform: rotate(-20deg)
-				top: 57px
-			&:nth-of-type(5)
-				transform: rotate(14deg)
-				top: 65px
-				left: 109px
-			&:nth-of-type(6)
-				transform: rotate(-2deg)
-				top: 57px
-				left: 109px
-		@media screen and (max-width: 553px) and (min-width: 300px)
-			width: 100px
-			height: 60px
-			left: 54px
-			border-radius: 100% 100% 70% 70%/90px
-			&:after
-				left: 56px
-			&__face
-				width: 80px
-				height: 40px
-			&__eye
-				width: 14px
-				height: 20px
-				top: 23px
-				left: 23px
-				&__iris
-					width: 11px
-					height: 16px
-					top: 2px
-					left: 1px
-				&:nth-of-type(2)
-					left: 63px
-			&__mouth
-				left: 44px
-			&__nose
-				left: 49px
-			&__mustash
-				width: 40px
-				&:nth-of-type(5)
-					top: 43px
-					left: 90px
-				&:nth-of-type(6)
-					top: 36px
-					left: 90px
-				&:nth-of-type(3)
-					top: 43px
-					left: -30px
-				&:nth-of-type(4)
-					top: 36px
-					left: -30px
-		&:hover:after
-			transform-origin: 50% 65%
-		&:hover:before
-			transform-origin: 50% 65%
-	
 	.about-me__character
 		padding: 0% 5%
 		border: 3px solid palette-rosa3
@@ -387,6 +196,196 @@
 				margin: 0 5px 0
 				&:before
 					color: #3DBBED
+.heart
+	display: block
+	position: relative
+	&__message
+		position: absolute
+		top: 10px
+		left: 46px
+		z-index: 1
+		color: #FFF
+		font-size: 18px;
+		h2
+			font-family: 'Indie Flower', cursive
+	&:after,
+	&:before
+		position: absolute
+		content: ""
+		height: 139px
+		width: 82px
+		background: #F32458
+		margin: 2px 10px
+		transform: rotate(45deg)
+		left: 91px
+		border-radius: 0 10px
+		border-radius: 38px 40px 0 0
+	&:after
+		left: 50px
+		transform: rotate(-45deg)
+		border-radius: 38px 40px 0 0
+.octocat
+	position: relative
+	width: 120px
+	height: 90px
+	background: #000
+	top: 4px
+	left: 0
+	border-radius: 100% 100% 50% 50% /90px
+	margin: 0 auto
+	display: block
+	animation: gato 5s
+	@media screen and (max-width: 1125px) and (min-width: 554px)
+		left: 50px		
+	&:before,
+	&:after
+		width: 43px
+		height: 39px
+		position: absolute
+		top: -6px
+		background: #000
+		content: " "
+		left: 2px
+		border-radius: 73px 5px
+		transform: rotate(-83deg)
+		animation: oreja-gato1 0.5s 35
+	&:after
+		transform: rotate(83deg)
+		left: 75px
+		border-radius: 5px 73px
+		animation: oreja-gato2 0.5s 35 
+		
+	&__face
+		position: absolute
+		width: 100px
+		height: 50px
+		background: #F4CAB1
+		bottom: 5px
+		border-radius: 50px
+		z-index: 2
+		left: 10px
+		box-shadow: inset 0px 2px 1px rgba(0,0,0,0.2)
+	&__eye
+		width: 18px
+		height: 29px
+		background: #FFF
+		position: absolute
+		top: 42px
+		left: 26px
+		z-index: 3
+		border-radius: 50% 50% / 13px
+		&-right
+			left: 77px
+		&__iris
+			width: 14px
+			height: 20px
+			position: absolute
+			border-radius: 50% 50%
+			background: #AC5C51
+			top: 4px
+			left: 2px
+			&:after
+				content: ""
+				width: 5px
+				height:5px
+				background: #FFF
+				border-radius: 50% 50%
+				position: absolute
+				top: 2px
+				left: 1px
+	&__mouth
+		width: 15px
+		height: 15px
+		position: absolute
+		background: transparent
+		border-radius: 50%
+		//box-shadow: 20px 15px 0 0 #AC5C51
+		border-bottom: 2px solid #ac5c51
+		bottom: 8px
+		left: 54px
+		z-index: 2
+	.sad
+		border-top: 2px solid #ac5c51
+		border-radius: 0px
+		transform: rotate(150deg)
+		border-bottom: 0px
+	&__nose
+		width: 6px
+		height: 6px
+		border-radius: 50% 50%
+		background: #AC5C51
+		position: absolute
+		bottom: 16px
+		left: 58px
+		z-index: 2
+	&__mustash
+		width: 64px
+		height: 24px
+		position: absolute
+		top: 64px
+		z-index: 2
+		left: -53px
+		border-radius: 31%
+		border-top: 1px solid #000
+		transform: rotate(-2deg)
+		&:nth-of-type(3)
+			transform: rotate(-20deg)
+			top: 65px
+		&:nth-of-type(4)
+			// transform: rotate(-20deg)
+			top: 57px
+		&:nth-of-type(5)
+			transform: rotate(14deg)
+			top: 65px
+			left: 109px
+		&:nth-of-type(6)
+			transform: rotate(-2deg)
+			top: 57px
+			left: 109px
+	@media screen and (max-width: 553px) and (min-width: 300px)
+		width: 100px
+		height: 60px
+		left: 54px
+		border-radius: 100% 100% 70% 70%/90px
+		&:after
+			left: 56px
+		&__face
+			width: 80px
+			height: 40px
+		&__eye
+			width: 14px
+			height: 20px
+			top: 23px
+			left: 23px
+			&__iris
+				width: 11px
+				height: 16px
+				top: 2px
+				left: 1px
+			&:nth-of-type(2)
+				left: 63px
+		&__mouth
+			left: 44px
+		&__nose
+			left: 49px
+		&__mustash
+			width: 40px
+			&:nth-of-type(5)
+				top: 43px
+				left: 90px
+			&:nth-of-type(6)
+				top: 36px
+				left: 90px
+			&:nth-of-type(3)
+				top: 43px
+				left: -30px
+			&:nth-of-type(4)
+				top: 36px
+				left: -30px
+	&:hover:after
+		transform-origin: 50% 65%
+	&:hover:before
+		transform-origin: 50% 65%
 @keyframes gato
 	from
 		opacity: 0

@@ -30,9 +30,18 @@ angular.module('portfolioApp',['ui.router','site.module','services.module', 'mus
 					.state('index.work.musicApi', {
 						url: '/musicapi',
 						views: {
-							'contenido' : {
+							'spotifyApi' : {
 								templateUrl: 'assets/templates/work/music.html',
 								controller: 'music.controller'
+							},
+						},
+					})
+					.state('index.work.shapes',{
+						url: '/shapes',
+						views: {
+							'shapes' : {
+								templateUrl: 'assets/templates/work/cssShapes.html',
+								controller: ''
 							},
 						},
 					})

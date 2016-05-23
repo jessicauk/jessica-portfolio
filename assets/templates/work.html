@@ -1,9 +1,19 @@
 <div class="work">
 	<section class="work-content">
-		<div class="block-item">
-			
-			<div ui-view="contenido"><h1>API Music</h1>
-			<a ui-sref="index.work.musicApi"><span class="icon-music"></span>Search Artist</a></div>
-		</div>
+		<article class="block-item">
+			<div ui-view="spotifyApi">
+				<h1>API Music</h1>
+				<a ui-sref="index.work.musicApi"><span class="icon-music"></span>Search Artist</a>
+			</div>
+			<div class="capa"></div>
+		</article>
+
+		<article class="block-item">
+			<div ui-view="shapes">
+				<h1>CSS Shapes</h1>
+				<a ui-sref="index.work.shapes"><span class="icon-star-full"></span>Fun Shapes</a>
+			</div>
+			<div class="capa"></div>
+		</article>
 	</section>
 </div>
