@@ -53,6 +53,7 @@ angular.module('portfolioApp',['ui.router','site.module','services.module', 'mus
 	}])
 	.controller('mainController', ['$scope', '$rootScope', '$http', function ( $scope, $rootScope, $http ) {
 		$scope.message = $rootScope.mensaje;
+		$scope.resizeText = true;
 			$(document).ready(function () {
 				$('#about').on("click", function() {
 					var p = $('#about').position();
@@ -61,10 +62,12 @@ angular.module('portfolioApp',['ui.router','site.module','services.module', 'mus
 					$sizeBlock = window.matchMedia("(min-width: 525px)");
 					if($sizeBlock.matches) {
 						$('#list-items').show();
-						console.log("resize");						
+						console.log("resize");
+						$scope.resizeText = true;
 					}else{
 						$('#list-items').hide();
 						$('.description ul').show();
+						$scope.resizeText = false;
 					}
 				})
 			})	

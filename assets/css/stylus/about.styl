@@ -1,27 +1,21 @@
 .about-me
 	.about-me__character
-		padding: 0% 5%
-		border: 3px solid palette-rosa3
-		width: 80%
-		margin: 7% auto
-		border-radius: 25px
-		box-shadow: 0px 0px 23px #7b7070
+		// padding: 0% 5%
+		// border: 3px solid palette-rosa3
+		width: 100%
+		margin: 60px auto
+		// border-radius: 25px
+		// box-shadow: 0px 0px 23px #7b7070
 		@media screen and (max-width: 768px) and (min-width: 300px)
-			margin: 13% auto
-		article
-			width: 80%
-			margin: 2% auto
-			min-height: 400px
-			border-radius: 5px
-			min-width: 300px
+			margin: 0% auto
+		.about-me__myself
+			border-radius: 0
 			h2
-				font-size: 30px
-				color: palette-rosa3
-				@media screen and (max-width: 768px) and (min-width: 300px)
-					text-align: center
-				&:nth-of-type(1)
-					font-family:'Poiret One', cursive;
-					font-weight: 100
+				margin-top: 40px
+				color: blanco
+			.about-me__name
+				@media screen and (max-width: 550px)
+					margin-top: 200px	
 			.photograph
 				position: absolute
 				width: 150px
@@ -32,13 +26,14 @@
 				margin: 40px auto
 				left: 0px
 				right: 0px
+				top: 0px
 				border-radius: 25px
 				@media screen and (max-width: 768px) and (min-width: 300px)
-					top: 57px
+					top: 0px
 				@media screen and (width: 768px) and (height: 1024px)
-					top: 100px
+					top: 0px
 				@media screen and (max-width: 767px)
-					top: 100px
+					top: 0px
 				&:after
 					content: ""
 					position: absolute
@@ -60,6 +55,24 @@
 					left: 0
 					border-radius: 50%
 					margin: 0 auto
+					border: 5px solid #D69049
+					//border: 5px solid #AD8944
+		article
+			// width: 80%
+			margin: 2% auto
+			min-height: 400px
+			border-radius: 5px
+			min-width: 300px
+			h2
+				font-size: 30px
+				color: palette-rosa3
+				@media screen and (max-width: 768px) and (min-width: 300px)
+					text-align: center
+				&:nth-of-type(1)
+					font-family:'Poiret One', cursive;
+					font-weight: 100
+		
+		
 			.about-me__technologies
 				width: 100%
 				min-height: 50px
@@ -132,7 +145,7 @@
 					p
 						text-align: center
 			&:nth-of-type(1)
-				min-height: 200px	
+				min-height: 230px	
 			&:nth-of-type(3)
 			&:nth-of-type(4)
 			&:nth-of-type(5)
@@ -276,23 +289,23 @@
 		border-radius: 50% 50% / 13px
 		&-right
 			left: 77px
-		&__iris
-			width: 14px
-			height: 20px
-			position: absolute
+	&__iris
+		width: 14px
+		height: 20px
+		position: absolute
+		border-radius: 50% 50%
+		background: #AC5C51
+		top: 4px
+		left: 2px
+		&:after
+			content: ""
+			width: 5px
+			height:5px
+			background: #FFF
 			border-radius: 50% 50%
-			background: #AC5C51
-			top: 4px
-			left: 2px
-			&:after
-				content: ""
-				width: 5px
-				height:5px
-				background: #FFF
-				border-radius: 50% 50%
-				position: absolute
-				top: 2px
-				left: 1px
+			position: absolute
+			top: 2px
+			left: 1px
 	&__mouth
 		width: 15px
 		height: 15px
@@ -357,13 +370,13 @@
 			height: 20px
 			top: 23px
 			left: 23px
-			&__iris
-				width: 11px
-				height: 16px
-				top: 2px
-				left: 1px
-			&:nth-of-type(2)
-				left: 63px
+		&__iris
+			width: 11px
+			height: 16px
+			top: 2px
+			left: 1px
+		&:nth-of-type(2)
+			left: 63px
 		&__mouth
 			left: 44px
 		&__nose

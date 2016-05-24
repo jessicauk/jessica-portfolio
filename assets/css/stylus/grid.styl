@@ -1,55 +1,69 @@
-.row, .column
+.griglia-riga, .griglia-colonna
 	box-sizing: border-box
-.row:after,.row:before
+.griglia-riga:after,.griglia-riga:before
 	content: " "
 	display: table
-.row:after
+.griglia-riga:after
 	clear:both
-.column
+.griglia-colonna
 	position: relative
 	float: left
 	display:block
-.column + .column
+	min-height: 30px
+	text-align: center
+.griglia-riga
+	margin-bottom: 10px
+	&:last-child
+		margin-bottom: 0px
+.griglia-colonna + .griglia-colonna
 	margin-left: 1.5%
-.col-1
+.griglia-colonna1
 	width: 6.95833333333%	
-.col-2
+.griglia-colonna2
 	width: 15.4166666667%
-.col-3
+.griglia-colonna3
 	width: 23.875%
-.col-4
+.griglia-colonna4
 	width: 32.3333333333%
-.col-5
+.griglia-colonna5
 	width: 40.7916666667%
-.col-6
+.griglia-colonna6
 	width: 49.25%
-.col-7
+.griglia-colonna7
 	width: 57.7083333333%
-.col-8
+.griglia-colonna8
 	width: 66.1666666666%
-.col-9
+.griglia-colonna9
 	width: 74.625%
-.col-10
+.griglia-colonna10
 	width: 83.0833333333%
-.col-11
+.griglia-colonna11
 	width: 91.5416666666%
-.col-12
+.griglia-colonna12
 	width: 100%
 @media only screen and (max-width: 550px)
-	.col-1,
-	.col-2,
-	.col-3,
-	.col-4,
-	.col-5,
-	.col-6,
-	.col-7,
-	.col-8,
-	.col-9,
-	.col-10,
-	.col-11,
-	.col-12
+	.griglia-colonna1,
+	.griglia-colonna2,
+	.griglia-colonna3,
+	.griglia-colonna4,
+	.griglia-colonna5,
+	.griglia-colonna6,
+	.griglia-colonna7,
+	.griglia-colonna8,
+	.griglia-colonna9,
+	.griglia-colonna10,
+	.griglia-colonna11,
+	.griglia-colonna12
 		width: auto
 		float: none
-	.column + .column
+	.griglia-colonna + .griglia-colonna
 		margin-left: 0
+	.griglia-riga
+		margin-bottom: 0px
+		&:last-child
+			.griglia-colonna:last-child
+				margin-bottom: 0px
+	.griglia-colonna
+		margin-bottom: 10px
+	
 	

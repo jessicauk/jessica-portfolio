@@ -1,8 +1,15 @@
 <div class="about-me">
 	<section class="about-me__character">
-		<article>
-			<div class="photograph">
-				<img src="assets/images/jessica4.jpg">
+		<article class="about-me__myself griglia-riga">
+			<div class="griglia-colonna griglia-colonna5">
+				<div class="photograph">
+					<img src="assets/images/jessica4.jpg">
+				</div>
+			</div>
+			<div class="griglia-colonna griglia-colonna7 about-me__name">
+				<h2>Jessica Apolinar Crisóstomo</h2>
+				<h2>Jessica Apolinar Crisóstomo</h2>
+				<h2>Jessica Apolinar Crisóstomo</h2>
 			</div>
 		</article>
 		<article class="">
@@ -18,7 +25,6 @@
 				</ul>
 			</div>
 		</article>
-		<article>
 			<h2>Technologies & Knowledges</h2>
 			<div class="about-me__technologies">
 				<div><span>JavaScript</span><span href="#js" class="icon-plus"></span></div>
@@ -44,7 +50,7 @@
 						<i class="devicon-bootstrap-plain-wordmark colored"></i>
 					</div>
 					<div class="stylus">
-						<img src="assets/images/technologies/stylus-logo.svg">
+						<!-- <img src="assets/images/technologies/stylus-logo.svg"> -->
 					</div>
 					<div>
 						<i class="devicon-sass-original colored"></i>
@@ -66,7 +72,7 @@
 						<i class="devicon-bower-line-wordmark colored"></i>
 					</div>
 					<div class="npm">
-						<img src="assets/images/technologies/npm-logo.svg">
+						<!-- <img src="assets/images/technologies/npm-logo.svg"> -->
 					</div>
 				</section>
 			</div>
@@ -135,9 +141,9 @@
 		<article>
 			<h2>Education</h2>
 			<div>
-				<h3>IPN - Unidad Profesional Interdisciplinaria de Ingeniería y Ciencias Sociales y Administrativas (UPIICSA). </h3><span>August 2010 - May 2014</span>
+				<h3 ng-show="resizeText">IPN - Unidad Profesional Interdisciplinaria de Ingeniería y Ciencias Sociales y Administrativas </h3><h3 ng-show="resizeText">IPN - UPIICSA</h3><span>August 2010 - May 2014</span>
 				<!-- <p>Bachelor's Degree: Informatics Engineering</p> -->
-				<p>Graduated of the UPIICSA in Informatics Engineering Bachelor's Degree.</p>
+				<p>Graduated of the UPIICSA in Informatics Engineering.</p>
 			</div>
 		</article>
 	</section>

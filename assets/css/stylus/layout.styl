@@ -27,6 +27,7 @@ palette-azul2 = rgba(37, 151, 248, 0.85)
 palette-rosa3 = #f55
 //palette-rosa4 = #FF5555
 palette-gris =  rgba(66, 61, 66, 0.6)
+palette-gris2 =  #8A8A8A
 palette-rosa2 = rgba(255, 0, 45, 0.69)
 palette-negro = rgb(39, 39, 39)
 palette-negro2 = rgb(35, 33, 33)
@@ -39,10 +40,10 @@ html
 		background: gris-body
 		font-family:'Roboto',sans-serif
 		font-weight: 100
-		section
-			min-width: 300px
 		.section-container
-			margin-top: 100px
+			margin-top: 50px
+			@media screen and (max-width: 525px)
+				margin-top: 40px
 		.layout-header
 			// background: rgba(47, 47, 44, 0.95)
 			background: palette-negro
