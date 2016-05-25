@@ -61,12 +61,12 @@ angular.module('portfolioApp',['ui.router','site.module','services.module', 'mus
 				$(window).resize(function () {
 					$sizeBlock = window.matchMedia("(min-width: 525px)");
 					if($sizeBlock.matches) {
-						$('#list-items').show();
+						// $('#list-items').show();
 						console.log("resize");
 						$scope.resizeText = true;
 					}else{
-						$('#list-items').hide();
-						$('.description ul').show();
+						// $('#list-items').hide();
+						// $('.description ul').show();
 						$scope.resizeText = false;
 					}
 				})

@@ -1,19 +1,53 @@
 .about-me
+	// background: palette-rosa3
+	background: palette-rosa3
+	padding: 1% 0%
 	.about-me__character
-		// padding: 0% 5%
 		// border: 3px solid palette-rosa3
-		width: 100%
+		background: blanco
+		width: 70%
+		margin: auto
 		margin: 60px auto
-		// border-radius: 25px
+		border-radius: 15px
 		// box-shadow: 0px 0px 23px #7b7070
 		@media screen and (max-width: 768px) and (min-width: 300px)
 			margin: 0% auto
+			width: 90%
 		.about-me__myself
 			border-radius: 0
 			h2
 				margin-top: 40px
 				color: blanco
 			.about-me__name
+				span
+					color: palette-rosa3
+					font-size: 35px
+				h2
+					margin: 10px auto
+					width: 51%
+					border-bottom: 3px solid palette-rosa3
+					line-height: 50px
+					
+				h3
+					margin: 10px 0
+				h2,h3
+					color: #222222
+					text-align: center
+				p
+					color: #222222
+					text-align: justify
+					padding: 0% 5%
+					&:first-child
+						text-align: center
+					@media screen and (max-width: 550px)
+						font-size: 14px
+						width: 90%
+						margin: 0 auto
+						display: block
+						text-align: center
+						padding: 0px
+						&:first-child
+							text-align: center
 				@media screen and (max-width: 550px)
 					margin-top: 200px	
 			.photograph
@@ -60,7 +94,6 @@
 		article
 			// width: 80%
 			margin: 2% auto
-			min-height: 400px
 			border-radius: 5px
 			min-width: 300px
 			h2
@@ -71,7 +104,6 @@
 				&:nth-of-type(1)
 					font-family:'Poiret One', cursive;
 					font-weight: 100
-		
 		
 			.about-me__technologies
 				width: 100%
@@ -191,7 +223,7 @@
 		&:nth-of-type(1)
 			p
 				margin: 10px 0
-				color: #664C4B
+				color: #222222
 				font-family:'Poiret One', cursive;
 			li
 				margin: 20px 0 10px 0

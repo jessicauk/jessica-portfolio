@@ -41,38 +41,44 @@ html
 		font-family:'Roboto',sans-serif
 		font-weight: 100
 		.section-container
-			margin-top: 50px
-			@media screen and (max-width: 525px)
-				margin-top: 40px
+			margin: 0px
+			// @media screen and (max-width: 525px)
+			// 	margin-top: 40px
 		.layout-header
 			// background: rgba(47, 47, 44, 0.95)
-			background: palette-negro
+			//background: rgba(39, 39, 39, 0.62)
 			position: fixed
 			top: 0
 			right: 0
 			left: 0
 			z-index: 4
 			min-height: 40px
-			.menu-responsive
+			width: 100%
+			.hide 
 				display: none
+			.menu-responsive
+				display: block
 				width: 40px
 				height: 100%
 				margin-right: 10px
 				cursor: pointer
+				// display: block
+				background: rgba(39, 39, 39, 0.62)
+				float: left
+				border-radius: 5px
+				margin: 5px
+				position: relative
 				&:hover 
 					background: #000
 					transition: background 0.2s ease-out
-				@media screen and (max-width: 525px) and (min-width: 300px)
-					display: block
-					float: left
-					border-radius: 5px
-					margin: 5px
-					span
-						background: blanco
-						height: 3px
-						width: 30px
-						display: block	
-						margin: 5px auto
+				span
+					background: blanco
+					height: 3px
+					width: 30px
+					display: block	
+					margin: 5px auto
+				//@media screen and (min-width: 200px)
+					
 			&-menu
 				@media screen and (max-width: 1015px) and (min-width: 525px)
 					width: 100%
@@ -84,17 +90,22 @@ html
 						margin: 0
 						li
 							width: 100% !important
-				width: 50%
-				margin: 0 auto
+				width: 280px
+				margin: 0
 				ul
-					margin: 10px 0
+					background: rgba(39, 39, 39, 0.62)
+					display: none
+					position: absolute
+					left: 0
+					top: 20px
+					width: 100%
 					@media screen and (max-width: 500px) and (min-width: 300px)
 						margin-top: 0
 					li
-						display: inline-block
-						width: calc(100%/3 - 4px)
+						display: block
+						width: 100%
 						a
-							color: rosa-3
+							color: blanco
 							text-decoration: none
 							text-align: center
 							line-height: 40px
@@ -134,6 +145,7 @@ html
 		.layout-content
 			display: block
 			min-height: 100vh
+			min-width: 350px
 			#section1
 				// background: url('../images/unionjack.jpg') 50% 0 no-repeat fixed
 				background: #FFF
