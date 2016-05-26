@@ -118,41 +118,48 @@
 				div
 					height: 50px
 					padding: 10px
-					width: calc(100%/5 - 34px)
+					width: calc(100%/4 - 35px)
 					display: inline-block
 					border-radius: 5px
 					//border: 4px solid rgb(277,208,166)
 					margin: 10px 5px
 					vertical-align: middle
 					min-width: 87px
+					
+					.icon-rotate
+						transform: rotate(45deg)
+						transition: .8s 
+						line-height: 7px
+					.icon-rotate-reset
+						transform: rotate(0deg)
+						transition: 1.2s 	
+					span
+						&:nth-of-type(1)
+							font-size: 14px
+							width: 75%
+							line-height: 16px
+							margin: 0px
+							display: inline-block
+							float: left
+						&:nth-of-type(2)
+							width: 10px
+							display: inline-block
+							float: left
+							cursor: pointer
+					.icon-plus
+						&:before
+							color: palette-azul
+						&:hover
+							color: palette-rosa1
+					@media screen and (max-width: 550px)
+						width: 40%
 					// box-shadow: 6px 6px 4px #B3B3A6
 					//background: rgba(237, 195, 152, 0.38)
-					&:nth-child(1)
-						.icon-rotate
-							transform: rotate(45deg)
-							transition: .5s 
-						.icon-rotate-reset
-							transform: rotate(0deg)
-							transition: .3s 
-							
+					&:hover
 						span
-							&:nth-of-type(1)
-								font-size: 14px
-								width: 65%
-								line-height: 16px
-								margin: 0px
-								display: inline-block
-								float: left
-							&:nth-of-type(2)
-								width: 0px
-								display: inline-block
-								float: right
-								cursor: pointer
-						.icon-plus
-							&:before
-								color: palette-azul
-							&:hover
-								font-size: 22px
+							color: palette-gris
+							transition: color .3s
+							
 					i
 						font-size: 50px
 						text-align: center
@@ -180,8 +187,29 @@
 			&:nth-of-type(1)
 				min-height: 230px	
 			&:nth-of-type(3)
+				h2
+					margin: 30px 88px
+					@media screen and (max-width: 550px)
+						margin: 30px 0px
 			&:nth-of-type(4)
+				p
+					text-align: center
+					padding: 0 80px
+					@media screen and (max-width: 550px)
+						padding: 0px
+				h2
+					margin: 30px 88px
+					@media screen and (max-width: 550px)
+						margin: 30px 0px
+				.griglia-colonna:first-child
+					margin-left: 10px
+					@media screen and (max-width: 550px)
+						margin-left: 0px
 			&:nth-of-type(5)
+				.griglia-riga:nth-of-type(1)
+					margin-bottom: 35px
+					@media screen and (max-width: 550px)
+						margin-bottom: 25px
 				p:first-child
 					text-align: justify
 					padding: 0 15px
@@ -201,6 +229,10 @@
 					margin: 30px 88px
 					@media screen and (max-width: 550px)
 						margin: 30px 0px
+				ul
+					li
+						text-align: left;
+						padding: 0 10%;
 			&:nth-of-type(7)
 				height: auto
 				min-height: initial
