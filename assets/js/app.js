@@ -78,7 +78,19 @@ angular.module('portfolioApp',['ui.router','site.module','services.module', 'mus
 			link: function (scope, element, attrs) {
 				$(element).on('click', function () {
 					$lista = $('#list-items');
+					
+						if($('.text-menu').hasClass('show')) {
+							$('.text-menu').removeClass('show').addClass('hide');
+							$('#menu-adapt').addClass('menu-transform');
+						}else{
+							setTimeout ( function () {
+								$('.text-menu').removeClass('hide').addClass('show');	
+							}, 500);
+								
+							$('#menu-adapt').removeClass('menu-transform');
+						}
 					$lista.slideToggle('slow');
+
 				});
 			}
 		}
