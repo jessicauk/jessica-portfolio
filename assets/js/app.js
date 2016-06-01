@@ -1,5 +1,5 @@
 angular.module('portfolioApp',['ui.router','site.module','services.module', 'music.module'])
-	.run(['$rootScope', function ( $rootScope ) {
+	.run(['$rootScope', '$http', function ( $rootScope, $http ) {
 		$rootScope.mensaje = "Angular tools";
 		$rootScope.prueba = "Es una pruueba";
 	}])

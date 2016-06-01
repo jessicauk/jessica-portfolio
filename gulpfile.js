@@ -26,7 +26,7 @@ gulp.task('js', function () {
 gulp.task('css', function () {
   return gulp.src('assets/css/stylus/import.styl')
     .pipe(stylus({compress:true}))
-    .pipe(gulp.dest('assets/build/'));
+    .pipe(gulp.dest('assets/build/'))
 });
 
 /*

@@ -9,6 +9,21 @@ angular.module('services.module',[])
 			},
 			albumTracks: function (url, idAlbum) {
 				return $http.get(url + '/v1/albums/'+idAlbum +'/tracks');
+			},
+			infoFileDownload: function (url) {
+				var data = {};
+				$http.get(url)
+					.success(function (response) {
+						data = response;
+						var fileTxt = new Blob(["hola"], {
+							type: "text/plain; charset=utf-8;",
+						});
+						saveAs(fileTxt,"file.txt");
+					})
+					.error(function (error) {
+						console.log("hay un error");
+					});
+				return data;
 			} 
 		};
 	}]);
