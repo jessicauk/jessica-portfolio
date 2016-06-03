@@ -66,9 +66,6 @@ angular.module('music.module', [])
 				.error(function (err) {
 					console.log("album no : ");
 				}); 
-		}
-		$scope.buttonFile = function () {
-			$scope.file = servicesFactory.infoFileDownload('https://api.spotify.com/v1/search?q=luis&type=artist');
-		}
+		};
 	}]); 
 
