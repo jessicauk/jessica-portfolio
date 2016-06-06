@@ -1,12 +1,18 @@
 angular.module('site.module',[])
 	.controller('about.controller', ['$scope', function ($scope) {
-		$('.icon-plus').on('click', function () {
-			var icon =  $(this);
-			var element = $(this).attr("href");
-			$(element).slideToggle("slow");
-			$(icon).toggleClass('icon-rotate');
-    		//$(icon).toggleClass('icon-rotate-reset');
-		});
+		$(document).ready( function () {
+			$('.icon-plus').on('click', function () {
+				var icon =  $(this);
+				var element = $(this).attr("href");
+				$(element).slideToggle("slow");
+				$(icon).toggleClass('icon-rotate');
+			});
+
+			$(window).scroll(function () {
+				var scrol_pos = $(window).scrollTop();
+				console.log(scrol_pos + " scrol_pos")
+			})
+		})
 
 	}])
 	.controller('work.controller', ['$scope','$http', 'servicesFactory', function ($scope, $http, servicesFactory) {

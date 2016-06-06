@@ -115,6 +115,13 @@
 				.npm, .stylus
 					img
 						width: 70%
+				section
+					width: 100%
+					div
+						width: calc(100% / 4)
+						margin: 0px 
+						min-width: 30px
+						padding: 3px 5px
 				div
 					height: 50px
 					padding: 10px
@@ -161,10 +168,12 @@
 							transition: color .3s
 							
 					i
-						font-size: 50px
+						font-size: 35px
 						text-align: center
 						display:block
 						margin: 0 auto
+						&:before
+							width: auto
 					span
 						text-align: center
 						display: block
@@ -218,6 +227,13 @@
 					border-radius: 50%
 					background: turquoise none repeat scroll 0% 0%
 					position: relative
+					h3
+						position: absolute
+						top: 40px
+					p 
+						position: absolute
+						top: 90px
+						left: 6px
 				p:first-child
 					text-align: justify
 					padding: 0 15px
