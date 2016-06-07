@@ -9,17 +9,19 @@ angular.module('site.module',[])
 			});
 
 			$(window).scroll(function () {
-				var scrol_pos = $(window).scrollTop();
-				console.log(scrol_pos + " scrol_pos")
+				var valorScroll = $(window).scrollTop();
+				console.log(scrol_pos + " scrol_before")
+				while(valorScroll>50){
+					console.log(valorScroll + " scrol_afer")
+				}
+				//console.log(scrol_pos + " scrol_pos")
+				
 			})
 		})
 
 	}])
 	.controller('work.controller', ['$scope','$http', 'servicesFactory', function ($scope, $http, servicesFactory) {
-		$scope.buttonFile = function () {
-			console.log("entro");
-			$scope.file = servicesFactory.infoFileDownload('https://api.spotify.com/v1/search?query=luis&offset=0&limit=20&type=artist');
-		};
+
 	}])
 	.controller('contact.controller', ['$scope', function ($scope) {
 

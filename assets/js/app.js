@@ -61,13 +61,20 @@ angular.module('portfolioApp',['ui.router','site.module','services.module', 'mus
 				$(window).resize(function () {
 					$sizeBlock = window.matchMedia("(min-width: 525px)");
 					if($sizeBlock.matches) {
-						// $('#list-items').show();
 						console.log("resize");
 						$scope.resizeText = true;
 					}else{
-						// $('#list-items').hide();
-						// $('.description ul').show();
 						$scope.resizeText = false;
+					}
+				})
+
+				$(window).scroll(function () {
+					var scrol_pos = $(window).scrollTop();
+					//console.log(scrol_pos + " scrol_pos")
+					if(scrol_pos > 0 && scrol_pos < 100){
+						angular.element('.Hola p').css({'color':'pink'});
+					}else{
+						angular.element('.Hola p').css({'color':'black'});
 					}
 				})
 			})	

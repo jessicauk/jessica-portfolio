@@ -15,15 +15,25 @@ angular.module('services.module',[])
 			} 
 		};
 	}])
-	.directive('downloadBtn', function () {
+	.directive('downloadBtn', ['$compile', 'servicesFactory', function ($compile, servicesFactory) {
 		return {
 			restrict: 'AE',
 			scope: {
-				fileName: '@fileN'
+				fileName: '@'
 			},
-			template: '<button id="fileBtn" download="{{fileName}}.txt" ng-click="buttonFile()">Click here!</button>',
+			template: '<button id="fileBtn" ng-click="getMyData()">Click here!</button>',
 			link: function (scope, iElement, iAttrs) {
-
+				scope.getMyData = function () {
+					servicesFactory.infoFileDownload('https://api.spotify.com/v1/search?query=luis&offset=0&limit=20&type=artist')
+						.success( function (response) {
+							scope.fileName = response;
+							console.log(JSON.stringify(scope.fileName), "esta es la respuesta de mi servicio");
+						})
+						.error( function (error) {
+							console.log(JSON.stringify(error), "se genero un error");
+						})
+				}
+				
 			}
 		}
-	})
+	}])

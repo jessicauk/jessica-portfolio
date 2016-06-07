@@ -175,6 +175,38 @@ html
 			display: block
 			min-height: 100vh
 			min-width: 350px
+			background: #484B54 
+			.Hola
+				margin-top: 30px
+				height: 800px
+				p
+					margin-top: 60px
+			.main-block
+				width: 50%
+				margin: 0 auto
+				article
+					width: calc(100%/2 - 57px)
+					height: 250px
+					margin: 30px 20px
+					padding: 5px
+					border: 2px solid #FFF
+					display: inline-block
+					cursor: pointer
+					@media screen and (max-width: 1530px) and (min-width: 900px)
+						height: 150px
+					@media screen and (max-width: 899px) and (min-width: 601px)
+						height: 100px
+					@media screen and (max-width: 600px)
+						width: auto
+						display: block
+						height: 100px
+					
+				&:nth-of-type(1)
+					padding-top: 30px
+				&:last-child
+					padding-bottom: 30px
+					
+				
 			#section1
 				// background: url('../images/unionjack.jpg') 50% 0 no-repeat fixed
 				background: #FFF
