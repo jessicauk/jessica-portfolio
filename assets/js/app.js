@@ -22,7 +22,7 @@ angular.module('portfolioApp',['ui.router','site.module','services.module', 'mus
 					templateUrl: "assets/templates/about.html",
 					controller: 'about.controller'
 				})
-				.state('index.work', {
+				.state('index.work', { //
 					url: 'work',
 					templateUrl: "assets/templates/work.html",
 					controller: 'work.controller'

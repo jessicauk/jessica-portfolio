@@ -182,12 +182,13 @@ html
 				p
 					margin-top: 60px
 			.myImage
-				background : url('../images/jess7.jpg') top left no-repeat fixed
+				background : url('../images/jess7.jpg') left top no-repeat fixed
 				height: 85vh
 				background-size: 100%
-				background-position-y: -100px
-					
-				
+				background-position-y: -310px
+				@media screen and (max-width: 800px)
+					height 25vh
+					background-position: 20% 0%	
 			.main-block
 				width: 50%
 				margin: 0 auto
@@ -195,32 +196,45 @@ html
 					width: calc(100%/2 - 57px)
 					height: 250px
 					margin: 30px 20px
-					padding: 5px
 					border: 2px solid #FFF
 					display: inline-block
 					cursor: pointer
 					position: relative
+					opacity: 1
+					min-width: 209px
+					min-height: 150px
 					@media screen and (max-width: 1530px) and (min-width: 900px)
 						height: 150px
+						margin: 15px
 					@media screen and (max-width: 899px) and (min-width: 601px)
 						height: 100px
+						min-width: none
+						min-height: none
 					@media screen and (max-width: 600px)
 						width: auto
 						display: block
 						height: 100px
+						min-width: none
+						min-height: none
 					&:hover
 						.layer
 							display: block
+					&:first-child
+						background-color: rosa-menu
+					&:nth-of-type(2)
+						background-color: rgb(195,168,195)
 					h1
 						color: blanco
 						text-align: center
 						margin: 15px auto
-					img 
+					.img-home 
 						display: block
 						position: relative
-					    min-height: 100%
-					    max-width: 100%
-					    opacity: 0.5
+						min-height: 100%
+						max-width: 100%
+						height: 100%
+						width: 100%
+						// opacity: 0.5
 					.layer 
 						position: absolute
 						top: 0
@@ -230,13 +244,26 @@ html
 						width: 100%
 						height: 100%
 						background: rgba(245, 241, 241, 0.16)
-						display: none
-						
+						box-sizing: border-box
+						transition: background .3s, opacity 0.35s, transform 0.35s
+						padding: 30px
+						@media screen and (max-width: 1290px) and (min-width: 1000px)
+							padding: 30px
+						@media screen and (max-width: 1000px)
+							padding: 0px
+						p, h1
+							color: blanco
+							text-align: center
+							
 				&:nth-of-type(1)
 					padding-top: 30px
 				&:last-child
 					padding-bottom: 30px
-					
+					article
+						&:first-child
+							background-color: palette-verde
+						&:last-child
+							background-color: palette-azul		
 				
 			#section1
 				// background: url('../images/unionjack.jpg') 50% 0 no-repeat fixed
