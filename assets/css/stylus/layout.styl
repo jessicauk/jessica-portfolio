@@ -181,6 +181,13 @@ html
 				height: 800px
 				p
 					margin-top: 60px
+			.myImage
+				background : url('../images/jess7.jpg') top left no-repeat fixed
+				height: 85vh
+				background-size: 100%
+				background-position-y: -100px
+					
+				
 			.main-block
 				width: 50%
 				margin: 0 auto
@@ -192,6 +199,7 @@ html
 					border: 2px solid #FFF
 					display: inline-block
 					cursor: pointer
+					position: relative
 					@media screen and (max-width: 1530px) and (min-width: 900px)
 						height: 150px
 					@media screen and (max-width: 899px) and (min-width: 601px)
@@ -200,7 +208,26 @@ html
 						width: auto
 						display: block
 						height: 100px
-					
+					&:hover
+						.layer
+							display: block
+					img 
+						display: block
+						position: relative
+					    min-height: 100%
+					    max-width: 100%
+					    opacity: 0.5
+					.layer 
+						position: absolute
+						top: 0
+						left: 0
+						right: 0
+						bottom: 0
+						width: 100%
+						height: 100%
+						background: rgba(245, 241, 241, 0.16)
+						display: none
+						
 				&:nth-of-type(1)
 					padding-top: 30px
 				&:last-child
