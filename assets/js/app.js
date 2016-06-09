@@ -70,11 +70,13 @@ angular.module('portfolioApp',['ui.router','site.module','services.module', 'mus
 
 				$(window).scroll(function () {
 					var scrol_pos = $(window).scrollTop();
-					//console.log(scrol_pos + " scrol_pos")
-					if(scrol_pos > 0 && scrol_pos < 100){
-						angular.element('.Hola p').css({'color':'pink'});
+					console.log(scrol_pos + " scrol_pos")
+					if(scrol_pos > 120){
+						angular.element('.main-block:even').addClass('animatee')
+						angular.element('.main-block:even').addClass('animationHome')
 					}else{
-						angular.element('.Hola p').css({'color':'black'});
+						angular.element('.main-block:even').removeClass('animatee');
+						angular.element('.main-block:even').removeClass('animationHome');
 					}
 				})
 			})	

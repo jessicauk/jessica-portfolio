@@ -182,7 +182,8 @@ html
 				p
 					margin-top: 60px
 			.myImage
-				background : url('../images/jess7.jpg') left top no-repeat fixed
+				//background : url('../images/home/circles.jpg') left top no-repeat fixed
+				background-color: blanco
 				height: 85vh
 				background-size: 100%
 				background-position-y: -310px
@@ -192,6 +193,7 @@ html
 			.main-block
 				width: 50%
 				margin: 0 auto
+				padding-top: 100px
 				@media screen and (max-width: 958px)
 					width: 60%
 					
@@ -258,10 +260,11 @@ html
 							color: blanco
 							text-align: center
 							
-				&:nth-of-type(1)
-					padding-top: 30px
+				&:first-child
+					padding-top: 100px
 				&:last-child
 					padding-bottom: 30px
+					padding-top: 0px
 					article
 						&:first-child
 							background-color: palette-verde
@@ -342,6 +345,13 @@ html
 
 				@media screen and (max-width: 988px) and (min-width: 300px)
 					width: 100%
-
+.animationHome
+	transform: translate(-15em, 0)
+	-webkit-transform: translate(-15em, 0)
+	-moz-transform: translate(-15em, 0)
+.animatee
+	transition: 2s ease-out-in
+	-webkit-transition: 2s ease-out-in
+	-moz-transition: 2s ease-out-in
 	
 	
