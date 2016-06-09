@@ -345,13 +345,25 @@ html
 
 				@media screen and (max-width: 988px) and (min-width: 300px)
 					width: 100%
-.animationHome
-	transform: translate(-15em, 0)
-	-webkit-transform: translate(-15em, 0)
-	-moz-transform: translate(-15em, 0)
+// .animationHome
+// 	transform: translate(-15em, 0)
+// 	-webkit-transform: translate(-15em, 0)
+// 	-moz-transform: translate(-15em, 0)
 .animatee
 	transition: 2s ease-out-in
 	-webkit-transition: 2s ease-out-in
 	-moz-transition: 2s ease-out-in
+	animation: blockAnim 2s
+	
+@keyframes blockAnim
+	0%
+		transform: translate(0px, 0px);
+		animation-timing-function:ease-in-out
+	50%
+		transform: translate(10px, 12px);
+		animation-timing-function:ease-in-out
+	100%
+		transform: translate(20px, 24px);
+		SSanimation-timing-function:ease-in-out
 	
 	
