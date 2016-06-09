@@ -61,20 +61,24 @@ html
 				transition: all 0.1s ease-out
 			.menu-responsive
 				display: block
-				width: 40px
-				height: 100%
+				width: 50px
+				height: 50px
 				margin-right: 10px
 				cursor: pointer
 				// display: block
 				background: rgba(39, 39, 39, 0.62)
 				float: left
-				border-radius: 5px
+				border-radius: 50%
 				margin: 5px
 				position: relative
 				z-index: 1
+				padding: 9px 5px
+				box-sizing: border-box
 				&:hover 
 					background: #000
-					transition: background 0.2s ease-out
+					transition: box-shadow, background 0.2s ease-out
+					box-shadow: 0 0 40px #292828
+					
 				span
 					background: blanco
 					height: 3px
@@ -83,7 +87,7 @@ html
 					margin: 5px auto
 				//@media screen and (min-width: 200px)
 			.menu-transform
-				height: 32px
+				height: 50px
 				span
 					&:nth-of-type(1)
 						transform: rotate(45deg)
@@ -117,7 +121,7 @@ html
 				width: 280px
 				margin: 0
 				ul
-					background: rgba(39, 39, 39, 0.62)
+					//background: rgba(39, 39, 39, 0.62)
 					display: none
 					position: absolute
 					left: 0
@@ -183,7 +187,7 @@ html
 					margin-top: 60px
 			.myImage
 				//background : url('../images/home/circles.jpg') left top no-repeat fixed
-				background-color: blanco
+				background-color: #DDD
 				height: 85vh
 				background-size: 100%
 				background-position-y: -310px
@@ -270,95 +274,16 @@ html
 							background-color: palette-verde
 						&:last-child
 							background-color: palette-azul		
-				
-			#section1
-				// background: url('../images/unionjack.jpg') 50% 0 no-repeat fixed
-				background: #FFF
-			#section2
-				// background: url('../images/violin-vs-cello.jpg') 50% 0 no-repeat fixed
-				background: #FFF
-				article
-					div
-						-ms-transform: rotate(45deg)
-						-webkit-transform: rotate(45deg)
-						-o-transform: rotate(45deg)
-						-moz-transform: rotate(45deg)
-						transform: rotate(45deg)
-			#section3
-				// background: url('../images/paisaje.jpg') 50% 0 no-repeat fixed
-				background: #FFF
-				article
-					div
-						-ms-transform: rotate(90deg)
-						-webkit-transform: rotate(90deg)
-						-o-transform: rotate(90deg)
-						-moz-transform: rotate(90deg)
-						transform: rotate(90deg)
-			#section1, #section2, #section3
-				min-height: 700px
-				max-width: 1920px
-				margin: 0px auto
-				width: 100%
-				position: relative
-				-webkit-background-size: cover
-				-moz-background-size: cover
-				-o-background-size: cover
-				background-size: cover
-				article
-					padding: 100px
-					h1
-						color: #FFF
-						font-weight: bold
-						text-align: center		
-				.section-image
-					background: #FFF
-					display: block
-					height : 350px
-					margin: 0 auto
-					width: 350px
-					-webkit-background-size: cover
-					-moz-background-size: cover
-					-o-background-size: cover
-					background-size: cover							
-			#section1, #section2
-				box-shadow: 0 0 75px rgba(255, 197, 3, 0.4)
-				-webkit-box-shadow:  0 0 75px rgba(255, 197, 3, 0.4)
-				-moz-box-shadow:  0 0 75px rgba(255, 197, 3, 0.4)
-				-o-box-shadow: 0 0 75px rgba(255, 197, 3, 0.4)
-		.layout-footer
-			width: 100%
-			min-height: 40px
-			// background: rgba(47, 47, 44, 0.95)
-			background: palette-negro
-			bottom: 0
-			left: 0
-			right: 0
-			margin: 0
- 			.text
-				color: rosa-3
-				margin: 0 auto
-				width: 30%
-				line-height: 40px
-				font-weight: 600
-				p
-					text-align: center
-
-				@media screen and (max-width: 988px) and (min-width: 300px)
-					width: 100%
-// .animationHome
-// 	transform: translate(-15em, 0)
-// 	-webkit-transform: translate(-15em, 0)
-// 	-moz-transform: translate(-15em, 0)
 .animate1
 	transition: 3s ease-out-in
 	-webkit-transition: 3s ease-out-in
 	-moz-transition: 3s ease-out-in
-	animation: blockTopAnim 3s
+	animation: blockTopAnim 2s
 .animate2
 	transition: 3s ease-out-in
 	-webkit-transition: 3s ease-out-in
 	-moz-transition: 3s ease-out-in
-	animation: blockBottomAnim 3s
+	animation: blockBottomAnim 2s
 	
 @keyframes blockTopAnim
 	0%

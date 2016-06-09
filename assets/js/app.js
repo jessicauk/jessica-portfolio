@@ -84,9 +84,9 @@ angular.module('portfolioApp',['ui.router','site.module','services.module', 'mus
 					}else{
 						angular.element('.main-block:odd').removeClass('animate2');
 					}
-					var p = $( ".main-block:even" );
-					var position = p.position();
-					console.log( "left: " + position.left + ", top: " + position.top );
+					// var p = $( ".main-block:even" );
+					// var position = p.position();
+					// console.log( "left: " + position.left + ", top: " + position.top );
 				})
 			})	
 	}])
@@ -107,7 +107,11 @@ angular.module('portfolioApp',['ui.router','site.module','services.module', 'mus
 								
 							$('#menu-adapt').removeClass('menu-transform');
 						}
-					$lista.slideToggle('slow');
+					$lista.slideToggle('slow', function () {
+						$('#list-items li').on('click', function () {
+							$lista.hide(1000);
+						})
+					});
 
 				});
 			}
