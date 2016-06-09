@@ -109,7 +109,7 @@ angular.module('portfolioApp',['ui.router','site.module','services.module', 'mus
 						}
 					$lista.slideToggle('slow', function () {
 						$('#list-items li').on('click', function () {
-							$lista.hide(1000);
+							$lista.hide();
 						})
 					});
 

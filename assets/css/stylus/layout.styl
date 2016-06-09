@@ -144,7 +144,7 @@ html
 							text-align: center
 							line-height: 40px
 							margin: 0 auto
-							width: 50%
+							width: 40%
 							display: block
 							font-weight: 600
 							position: relative
@@ -172,7 +172,7 @@ html
 									left: 0
 									bottom: 0
 									height: 4px
-									background: palette-rosa3
+									//background: palette-rosa3
 									transition: right 0.3s ease-out
 								&:hover:after					
 									right: 0
@@ -196,12 +196,16 @@ html
 				width: 50%
 				margin: 0 auto
 				padding-top: 115px
-				@media screen and (max-width: 958px)
+				@media screen and (max-width: 1530px) and (min-width: 1422px)
+					width: 50%
+				@media screen and (max-width: 1421px) and (min-width: 1188px)
 					width: 60%
+				@media screen and (max-width: 1187px) and (min-width: 900px)
+					width: 80%
 					
 				article
 					width: calc(100%/2 - 57px)
-					height: 250px
+					height: 350px
 					margin: 30px 20px
 					border: 2px solid #FFF
 					display: inline-block
@@ -211,18 +215,19 @@ html
 					min-width: 209px
 					min-height: 150px
 					@media screen and (max-width: 1530px) and (min-width: 900px)
-						height: 150px
-						margin: 15px
+						height: 60%
+						margin: 3em 2em auto
+						width: 40%
 					@media screen and (max-width: 899px) and (min-width: 601px)
-						height: 100px
-						min-width: none
-						min-height: none
+						height: 300px
+						margin: 3em 0
+						width: 100%
 					@media screen and (max-width: 600px)
-						width: auto
+						width: 100%
 						display: block
-						height: 100px
-						min-width: none
-						min-height: none
+						height: 100%
+						margin: 3em 0
+						
 					&:hover
 						.img-home
 							transform: scale(1)
@@ -259,6 +264,7 @@ html
 						width: 100%
 						transform: scale(0)
 						-webkit-transition: transform 0.9s ease-in-out
+						// opacity: 0.5
 					.layer 
 						position: absolute
 						top: 0
