@@ -42,6 +42,7 @@ html
 		font-weight: 100
 		.section-container
 			margin: 0px
+			border-box: box-sizing
 			// @media screen and (max-width: 525px)
 			// 	margin-top: 40px
 		.layout-header
@@ -174,17 +175,14 @@ html
 									background: palette-rosa3
 									transition: right 0.3s ease-out
 								&:hover:after					
-									right: 0											
+									right: 0
+		.home-content
+			padding-bottom: 50px											
 		.layout-content
 			display: block
 			min-height: 100vh
 			min-width: 350px
 			background: #484B54 
-			.Hola
-				margin-top: 30px
-				height: 800px
-				p
-					margin-top: 60px
 			.myImage
 				//background : url('../images/home/circles.jpg') left top no-repeat fixed
 				background-color: #DDD
@@ -226,8 +224,21 @@ html
 						min-width: none
 						min-height: none
 					&:hover
+						.img-home
+							transform: scale(1)
 						.layer
 							display: block
+							h1
+								margin: 30px auto
+								font-size: 30px
+							p
+								transform: scale(1)
+							&:before
+								-webkit-transform: scale(1)
+								visibility: visible
+								opacity: 1
+								transition: opacity 0.35s, transform 0.35s
+								
 					&:first-child
 						background-color: rosa-menu
 					&:nth-of-type(2)
@@ -235,7 +246,10 @@ html
 					h1
 						color: blanco
 						text-align: center
-						margin: 15px auto
+						margin: 75px auto
+						font-size: 25px
+						@media screen and (max-width: 800px)
+							margin-top: 70px
 					.img-home 
 						display: block
 						position: relative
@@ -243,6 +257,8 @@ html
 						max-width: 100%
 						height: 100%
 						width: 100%
+						transform: scale(0)
+						-webkit-transition: transform 0.9s ease-in-out
 						// opacity: 0.5
 					.layer 
 						position: absolute
@@ -254,8 +270,23 @@ html
 						height: 100%
 						background: rgba(245, 241, 241, 0.16)
 						box-sizing: border-box
-						transition: background .3s, opacity 0.35s, transform 0.35s
+						transition: background .3s
 						padding: 30px
+						&:before
+							position: absolute
+							top: 30px
+							bottom: 30px
+							left: 30px
+							right: 30px
+							padding: 30px
+							border: 1px solid blanco
+							content: ""
+							visibility: hidden
+							opacity: 0
+							-webkit-transform: scale(0)
+							transition: opacity 0.35s, transform 0.35s
+							box-sizing: border-box
+  							
 						@media screen and (max-width: 1290px) and (min-width: 1000px)
 							padding: 30px
 						@media screen and (max-width: 1000px)
@@ -263,6 +294,11 @@ html
 						p, h1
 							color: blanco
 							text-align: center
+						p
+							transform: scale(0)
+							@media screen and (max-width: 800px)
+								display: none
+						
 							
 				&:first-child
 					padding-top: 100px
@@ -315,5 +351,6 @@ html
 		transform: translate(0px, 0px);
 		SSanimation-timing-function:ease-in-out
 		opacity: 1
-	
+		
+
 	
