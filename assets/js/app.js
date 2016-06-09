@@ -71,13 +71,22 @@ angular.module('portfolioApp',['ui.router','site.module','services.module', 'mus
 				$(window).scroll(function () {
 					var scrol_pos = $(window).scrollTop();
 					console.log(scrol_pos + " scrol_pos")
-					if(scrol_pos > 120){
-						angular.element('.main-block:even').addClass('animatee')
-						angular.element('.main-block:even').addClass('animationHome')
+					if(scrol_pos > 60){
+						angular.element('.main-block:even').addClass('animate1')
+						//angular.element('.main-block:even').addClass('animationHome')
 					}else{
-						angular.element('.main-block:even').removeClass('animatee');
-						angular.element('.main-block:even').removeClass('animationHome');
+						angular.element('.main-block:even').removeClass('animate1');
+						//angular.element('.main-block:even').removeClass('animationHome');
 					}
+					if(scrol_pos > 252){
+						angular.element('.main-block:odd').addClass('animate2')
+						//angular.element('.main-block:odd').addClass('animationHome')
+					}else{
+						angular.element('.main-block:odd').removeClass('animate2');
+					}
+					var p = $( ".main-block:even" );
+					var position = p.position();
+					console.log( "left: " + position.left + ", top: " + position.top );
 				})
 			})	
 	}])

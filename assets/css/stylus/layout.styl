@@ -193,7 +193,7 @@ html
 			.main-block
 				width: 50%
 				margin: 0 auto
-				padding-top: 100px
+				padding-top: 115px
 				@media screen and (max-width: 958px)
 					width: 60%
 					
@@ -349,21 +349,58 @@ html
 // 	transform: translate(-15em, 0)
 // 	-webkit-transform: translate(-15em, 0)
 // 	-moz-transform: translate(-15em, 0)
-.animatee
-	transition: 2s ease-out-in
-	-webkit-transition: 2s ease-out-in
-	-moz-transition: 2s ease-out-in
-	animation: blockAnim 2s
+.animate1
+	transition: 3s ease-out-in
+	-webkit-transition: 3s ease-out-in
+	-moz-transition: 3s ease-out-in
+	animation: blockTopAnim 3s
+.animate2
+	transition: 3s ease-out-in
+	-webkit-transition: 3s ease-out-in
+	-moz-transition: 3s ease-out-in
+	animation: blockBottomAnim 3s
 	
-@keyframes blockAnim
+@keyframes blockTopAnim
 	0%
-		transform: translate(0px, 0px);
+		transform: translate(-50px, -50px);
+		opacity: 0
 		animation-timing-function:ease-in-out
+	25%
+		transform: translate(-25px, -25px);
+		animation-timing-function:ease-in-out
+		opacity: 0.25
 	50%
-		transform: translate(10px, 12px);
+		transform: translate(-15px, -15px);
 		animation-timing-function:ease-in-out
+		opacity: 0.5
+	75%
+		transform: translate(-5px, -5px);
+		animation-timing-function:ease-in-out
+		opacity: 0.75
 	100%
-		transform: translate(20px, 24px);
+		transform: translate(0px, 0px);
 		SSanimation-timing-function:ease-in-out
+		opacity: 1
+@keyframes blockBottomAnim
+	0%
+		transform: translate(50px, 50px);
+		opacity: 0
+		animation-timing-function:ease-in-out
+	25%
+		transform: translate(25px, 25px);
+		animation-timing-function:ease-in-out
+		opacity: 0.25
+	50%
+		transform: translate(15px, 15px);
+		animation-timing-function:ease-in-out
+		opacity: 0.5
+	75%
+		transform: translate(5px, 5px);
+		animation-timing-function:ease-in-out
+		opacity: 0.75
+	100%
+		transform: translate(0px, 0px);
+		SSanimation-timing-function:ease-in-out
+		opacity: 1
 	
 	
