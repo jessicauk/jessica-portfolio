@@ -50,6 +50,11 @@ angular.module('portfolioApp',['ui.router','site.module','services.module', 'mus
 					templateUrl: "assets/templates/contact.html",
 					controller: ''
 				})
+				// .state('prueba.work', { //
+				// 	url: 'prueba',
+				// 	templateUrl: "assets/templates/prueba.html",
+				// 	controller: 'prueba.controller'
+				// })
 	}])
 	.controller('mainController', ['$scope', '$rootScope', '$http', function ( $scope, $rootScope, $http ) {
 		$scope.message = $rootScope.mensaje;
@@ -59,12 +64,20 @@ angular.module('portfolioApp',['ui.router','site.module','services.module', 'mus
 					var p = $('#about').position();
 				});
 				$(window).resize(function () {
-					$sizeBlock = window.matchMedia("(min-width: 525px)");
+					$sizeBlock = window.matchMedia("(max-width: 500px)");
+					//$responsiveM = window.matchMedia("(max-width: 768px)");
 					if($sizeBlock.matches) {
-						console.log("resize");
-						$scope.resizeText = true;
-					}else{
-						$scope.resizeText = false;
+						if(scrol_pos > 155){
+							angular.element('.main-block:even').addClass('animate1')
+						}else{
+							angular.element('.main-block:even').removeClass('animate1');
+						}
+						if(scrol_pos > 700){
+							angular.element('.main-block:odd').addClass('animate2')
+						}else{
+							angular.element('.main-block:odd').removeClass('animate2');
+						}
+
 					}
 				})
 
@@ -73,20 +86,15 @@ angular.module('portfolioApp',['ui.router','site.module','services.module', 'mus
 					console.log(scrol_pos + " scrol_pos")
 					if(scrol_pos > 60){
 						angular.element('.main-block:even').addClass('animate1')
-						//angular.element('.main-block:even').addClass('animationHome')
 					}else{
 						angular.element('.main-block:even').removeClass('animate1');
-						//angular.element('.main-block:even').removeClass('animationHome');
 					}
+
 					if(scrol_pos > 252){
 						angular.element('.main-block:odd').addClass('animate2')
-						//angular.element('.main-block:odd').addClass('animationHome')
 					}else{
 						angular.element('.main-block:odd').removeClass('animate2');
 					}
-					// var p = $( ".main-block:even" );
-					// var position = p.position();
-					// console.log( "left: " + position.left + ", top: " + position.top );
 				})
 			})	
 	}])
@@ -96,23 +104,29 @@ angular.module('portfolioApp',['ui.router','site.module','services.module', 'mus
 			link: function (scope, element, attrs) {
 				$(element).on('click', function () {
 					$lista = $('#list-items');
-					
-						if($('.text-menu').hasClass('show')) {
-							$('.text-menu').removeClass('show').addClass('hide');
-							$('#menu-adapt').addClass('menu-transform');
-						}else{
-							setTimeout ( function () {
-								$('.text-menu').removeClass('hide').addClass('show');	
-							}, 500);
-								
-							$('#menu-adapt').removeClass('menu-transform');
-						}
+					$mresponsive = $('#menu-adapt');	
+					if($mresponsive.hasClass('menu-transform')){
+						$mresponsive.removeClass('menu-transform');
+					}else{
+						$mresponsive.addClass('menu-transform');
+					}
+
+					if($('.text-menu').hasClass('show')) {
+						$('.text-menu').removeClass('show').addClass('hide');
+					}else{
+						setTimeout ( function () {
+							$('.text-menu').removeClass('hide').addClass('show');	
+						}, 500);
+					}
 					$lista.slideToggle('slow', function () {
 						$('#list-items li').on('click', function () {
-							$lista.hide();
-						})
+							$lista.hide(function () {
+								if($mresponsive.hasClass('menu-transform')){
+									$mresponsive.removeClass('menu-transform')
+								}
+							});
+						});
 					});
-
 				});
 			}
 		}

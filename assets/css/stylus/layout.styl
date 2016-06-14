@@ -43,6 +43,7 @@ html
 		.section-container
 			margin: 0px
 			border-box: box-sizing
+			min-width: 100%
 			// @media screen and (max-width: 525px)
 			// 	margin-top: 40px
 		.layout-header
@@ -55,6 +56,8 @@ html
 			z-index: 4
 			min-height: 40px
 			width: 40px
+			@media screen and (max-width: 768px)
+				width: 100%
 			.hide 
 				display: none
 			.show 
@@ -86,6 +89,7 @@ html
 					width: 30px
 					display: block	
 					margin: 5px auto
+					transition: all 0.2s ease-out
 				//@media screen and (min-width: 200px)
 			.menu-transform
 				height: 50px
@@ -129,8 +133,10 @@ html
 					// top: 34px
 					width: 202px
 					//min-height: 50vh
-					@media screen and (max-width: 500px) and (min-width: 300px)
+					@media screen and (max-width: 768px)
 						margin-top: 0
+						width: 100%
+						background: #ff7fb6
 					li
 						display: block
 						width: 100%
@@ -181,7 +187,7 @@ html
 		.layout-content
 			display: block
 			min-height: 100vh
-			min-width: 350px
+			min-width: 100%
 			background: #484B54 
 			.myImage
 				//background : url('../images/home/circles.jpg') left top no-repeat fixed
@@ -190,18 +196,22 @@ html
 				background-size: 100%
 				background-position-y: -310px
 				@media screen and (max-width: 800px)
-					height 25vh
+					height 100vh
 					background-position: 20% 0%	
 			.main-block
 				width: 50%
 				margin: 0 auto
-				padding-top: 115px
+				padding-top: 120px
+				margin-top: 50px
 				@media screen and (max-width: 1530px) and (min-width: 1422px)
 					width: 50%
 				@media screen and (max-width: 1421px) and (min-width: 1188px)
 					width: 60%
 				@media screen and (max-width: 1187px) and (min-width: 900px)
 					width: 80%
+				@media screen and (max-width: 400px)
+					width: 60%
+					
 					
 				article
 					width: calc(100%/2 - 57px)
@@ -227,6 +237,8 @@ html
 						display: block
 						height: 100%
 						margin: 3em 0
+					@media screen and (max-width: 400px)
+						min-width: 100%
 						
 					&:hover
 						.img-home
