@@ -50,11 +50,11 @@ angular.module('portfolioApp',['ui.router','site.module','services.module', 'mus
 					templateUrl: "assets/templates/contact.html",
 					controller: ''
 				})
-				// .state('prueba.work', { //
-				// 	url: 'prueba',
-				// 	templateUrl: "assets/templates/prueba.html",
-				// 	controller: 'prueba.controller'
-				// })
+				.state('index.prueba', { //
+					url: 'prueba',
+					templateUrl: "assets/templates/prueba.html",
+					controller: ''
+				})
 	}])
 	.controller('mainController', ['$scope', '$rootScope', '$http', function ( $scope, $rootScope, $http ) {
 		$scope.message = $rootScope.mensaje;
