@@ -1,4 +1,4 @@
-angular.module('portfolioApp',['ui.router','site.module','services.module', 'music.module'])
+angular.module('portfolioApp',['ui.router','site.module','services.module', 'music.module','prueba.module'])
 	.run(['$rootScope', '$http', function ( $rootScope, $http ) {
 		$rootScope.mensaje = "Angular tools";
 		$rootScope.prueba = "Es una pruueba";
@@ -53,7 +53,7 @@ angular.module('portfolioApp',['ui.router','site.module','services.module', 'mus
 				.state('index.prueba', { //
 					url: 'prueba',
 					templateUrl: "assets/templates/prueba.html",
-					controller: ''
+					controller: 'prueba.controller'
 				})
 	}])
 	.controller('mainController', ['$scope', '$rootScope', '$http', function ( $scope, $rootScope, $http ) {
