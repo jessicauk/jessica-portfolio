@@ -50,7 +50,7 @@ angular.module('portfolioApp',['ui.router','site.module','services.module', 'mus
 					templateUrl: "assets/templates/contact.html",
 					controller: ''
 				})
-				.state('index.prueba', { //
+				.state('index.prueba', { // //
 					url: 'prueba',
 					templateUrl: "assets/templates/prueba.html",
 					controller: 'prueba.controller'
