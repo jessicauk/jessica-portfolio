@@ -192,9 +192,9 @@ html
 			.myImage
 				background : url('../images/home/desktop-finish-03-01-OK-01.png') left top no-repeat fixed
 				//background-color: #DDD
-				height: 85vh
+				height: 100vh
 				background-size: 100%
-				background-position-y: -310px
+				//background-position-y: -310px
 				@media screen and (max-width: 800px)
 					height 100vh
 					background-position: 20% 0%	
@@ -242,7 +242,9 @@ html
 						
 					&:hover
 						.img-home
-							transform: scale(1)
+							//transform: scale(1)
+							display: block
+								
 						.layer
 							display: block
 							h1
@@ -251,10 +253,10 @@ html
 							p
 								transform: scale(1)
 							&:before
-								-webkit-transform: scale(1)
+								//-webkit-transform: scale(1)
 								visibility: visible
 								opacity: 1
-								transition: opacity 0.35s, transform 0.35s
+								transition: opacity 0.35s //, transform 0.35s
 								
 					&:first-child
 						background-color: rosa-menu
@@ -274,8 +276,8 @@ html
 						max-width: 100%
 						height: 100%
 						width: 100%
-						transform: scale(0)
-						-webkit-transition: transform 0.9s ease-in-out
+						transform: scale(1)
+						//-webkit-transition: transform 0.9s ease-in-out
 						// opacity: 0.5
 					.layer 
 						position: absolute
