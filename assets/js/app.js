@@ -22,12 +22,12 @@ angular.module('portfolioApp',['ui.router','site.module','services.module', 'mus
 					templateUrl: "assets/templates/about.html",
 					controller: 'about.controller'
 				})
-				.state('index.work', { //
+				.state('index.work', {
 					url: 'work',
 					templateUrl: "assets/templates/work.html",
 					controller: 'work.controller'
 				})
-					.state('index.work.musicApi', {
+					/*.state('index.work.musicApi', {
 						url: '/musicapi',
 						views: {
 							'spotifyApi' : {
@@ -35,7 +35,7 @@ angular.module('portfolioApp',['ui.router','site.module','services.module', 'mus
 								controller: 'music.controller'
 							},
 						},
-					})
+					})*/
 					.state('index.work.shapes',{
 						url: '/shapes',
 						views: {
