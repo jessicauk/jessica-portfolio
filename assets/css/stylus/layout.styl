@@ -36,10 +36,14 @@ palette-verde = #2ee0ae
 
 html
 	body
-		background: rgba(228, 213, 227, 0.52)
-		background: gris-body
+		//background: rgba(228, 213, 227, 0.52)
+		background: #484b54
 		font-family:'Roboto',sans-serif
 		font-weight: 100
+		width: 100%
+		height:100%
+		.section-header
+			margin: -25px
 		.section-container
 			margin: 0px
 			border-box: box-sizing
@@ -209,19 +213,21 @@ html
 					right: 0
 					bottom: 0
 					background : url('../images/home/overlay.png')
-				/*&:before
-					width: 100vh
-					height: 100vh
-					position: relative
-					color: red
-					z-index: 1
-					content: ""
-					opacity: 0.7
-					//background : url('../images/home/overlay.png') left top no-repeat fixed
-					height: 100vh
-					//background-size: 100%	
-					display: block
-					visibility: visible*/
+				h1
+					opacity 1
+					color: #FFF
+					font-size: 60px
+					position: absolute
+					top: 30%
+					left: 30%
+					z-index: 2
+				h3
+					color: #FFF
+					font-size: 30px
+					position: absolute
+					top: 40%
+					left: 40%
+					z-index: 2
 				@media screen and (max-width: 1000px) and (min-width: 801px)
 					height: 72vh
 				@media screen and (max-width: 800px)

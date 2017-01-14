@@ -1,24 +1,35 @@
 <div class="about-me">
-	<section class="about-me__character">
-		<article class="about-me__myself griglia-riga">
-			<div class="griglia-colonna griglia-colonna5">
-				<div class="photograph">
-					<img src="assets/images/jessica4.jpg">
+	<section class="about-me__character wrap" id="slider-about">
+		<div class="slide-selector">
+			<label for="slide-1"></label>
+			<label for="slide-2"></label>
+			<label for="slide-3"></label>
+			<label for="slide-4"></label>
+			<label for="slide-5"></label>
+			<label for="slide-6"></label>
+		</div>
+		
+		<input type="radio" class="" id="slide-1" name="slides" checked>
+		<article class="about-me__myself griglia-riga slide">
+			<div>
+				<div class="griglia-colonna griglia-colonna5">
+					<div class="photograph">
+						<img src="assets/images/jessica4.jpg">
+					</div>
+				</div>
+				<div class="griglia-colonna griglia-colonna7 about-me__name">
+					<h2>Hi, I'm <span>Jessica Apolinar!</span></h2>
+					<h3>Frontend Developer</h3>
+					<p>I am a frontend web developer, I'm fond of web trend technologies development. Fan of the United Kingdom and British music.</p>
 				</div>
 			</div>
-			<div class="griglia-colonna griglia-colonna7 about-me__name">
-				<h2>Hi, I'm <span>Jessica Apolinar!</span></h2>
-				<h3>Frontend Web Developer</h3>
-				<p>Programming | Web Developer</p>
-				<p>I am a frontend web developer, I'm fond of web trend technologies development. Fan of the United Kingdom and British music.</p>
-			</div>
 		</article>
-		<article class="griglia-riga">
+			
+		<input type="radio" class="" id="slide-2" name="slides" >
+		<article class="griglia-riga slide">
 			<div class="griglia-colonna griglia-colonna4">
 				<h2>PROFILE</h2>
-				<h4>Full Name</h4>
 				<p>Jessica Apolinar Crisóstomo</p>
-				<h4>BORN</h4>
 				<p>22 June - Mexico City</p>
 			</div>
 			<div class="griglia-colonna griglia-colonna2"></div>
@@ -30,7 +41,9 @@
 				<p>Graduated of the UPIICSA in Informatics Engineering.</p>
 			</div>
 		</article>
-		<article class="skills">
+			
+		<input type="radio" class="" id="slide-3" name="slides" >
+		<article class="skills slide">
 			<h2>PROFESSIONAL SKILLS</h2>
 			<div class="about-me__technologies">
 				<div>
@@ -117,7 +130,9 @@
 				</div>
 			</div>
 		</article>
-		<article>
+			
+		<input type="radio" class="" id="slide-4" name="slides" >
+		<article class="slide">
 			<h2>LANGUAGES</h2>
 			<div class="griglia-riga">
 				<div class="griglia-colonna griglia-colonna2">
@@ -128,8 +143,24 @@
 				</div>
 			</div>
 		</article>
-		<article>
+			
+		<input type="radio" class="" id="slide-5" name="slides" >	
+		<article class="slide">
 			<h2>WORK EXPERIENCE</h2>
+			<div class="griglia-riga">
+				<div class="item-expertise griglia-colonna griglia-colonna6">
+					<div class="griglia-riga">
+						<div class="item-expertise circle griglia-colonna griglia-colonna6">
+							<h3>{{ Frontend Web Developer at <span>Global HITSS }}</span></h3>
+							<p>July 2016 - December 2016</p>
+						</div>
+					</div>
+				</div>
+				<div class="griglia-colonna griglia-colonna6" style="margin-top: 50px">
+					<p>I've got experince in frontend development and UI responsive designe, I've been working all this time with CSS, HTML5, Angular JS technologies.
+					In addition I have used automatic web tools such as Grunt, Gulp.</p>
+				</div>
+			</div>
 			<div class="griglia-riga">
 				<div class="item-expertise griglia-colonna griglia-colonna6">
 					<div class="griglia-riga">
@@ -159,7 +190,9 @@
 				</div>
 			</div>
 		</article>
-		<article>
+
+		<input type="radio" class="" id="slide-6" name="slides" >
+		<article class="slide">
 			<h2>INTERESTS</h2>
 			<div class="griglia-riga">
 				<div class="griglia-colonna griglia-colonna12">
@@ -172,9 +205,6 @@
 					</ul>
 				</div>
 			</div>
-		</article>
+		</article>	
 	</section>
 </div>
-<!-- 
-
- -->
