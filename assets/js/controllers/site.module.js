@@ -14,9 +14,32 @@ angular.module('site.module',[])
 				while(valorScroll>50){
 					console.log(valorScroll + " scrol_afer")
 				}
-				//console.log(scrol_pos + " scrol_pos")
+				console.log(scrol_pos + " scrol_pos")
 				
 			})
+
+			var scrolled = 0;
+			$scope.scrollFnc = function () {
+				var scrollValue = $(".experince").scrollTop();
+				if (scrollValue > 0) {
+					$(".experince").stop().animate({
+	            		scrollTop: 0
+	        		}, function (){
+	        			$(".scroll-down").animate({bottom:'0'}).before(function(){
+		        			$(this).css({transform:'rotate(0deg)'});
+		        		})
+	        		})
+				} else {
+					scrolled = scrolled + 500;
+		        	$(".experince").stop().animate({
+		            	scrollTop: scrolled
+		        	}, function (){
+		        		$(".scroll-down").animate({bottom:'-10%'}).before(function(){
+		        			$(this).css({transform:'rotate(180deg)'});
+		        		})
+		        	});
+				}
+			}
 		})
 
 	}])
