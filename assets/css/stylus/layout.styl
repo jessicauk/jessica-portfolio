@@ -48,6 +48,7 @@ html
 			margin: 0px
 			border-box: box-sizing
 			min-width: 100%
+			min-width: 300px
 			// @media screen and (max-width: 525px)
 			// 	margin-top: 40px
 		.layout-header
@@ -221,6 +222,21 @@ html
 					top: 30%
 					left: 30%
 					z-index: 2
+					@media screen and (max-width: 1000px) and (min-width: 845px)
+						font-size: 45px
+						left: 17%
+						
+					@media screen and (max-width:560px) and (min-width: 400)
+						font-size: 24px
+						left: 24%
+					@media screen and (max-width:400px)
+						font-size: 17px
+						left: 24%
+					@media screen and (max-width: 844px) and (min-width: 685px)
+						font-size:52px
+						top: 30%
+						left: 20%
+					
 				h3
 					color: #FFF
 					font-size: 30px
@@ -228,10 +244,22 @@ html
 					top: 40%
 					left: 40%
 					z-index: 2
+					@media screen and (max-width: 1000px) and (min-width: 850px)
+						top: 45%
+					@media screen and (max-width:560px) and (min-width: 400)
+						font-size: 22px
+						left: 29%
+					@media screen and (max-width:400px)
+						font-size: 13px
+						left: 30%
+						top: 50%
+					@media screen and (max-width: 849px) and (min-width: 685px)
+						font-size: 32px
+						top: 60%
+						left: 33%
 				@media screen and (max-width: 1000px) and (min-width: 801px)
 					height: 72vh
 				@media screen and (max-width: 800px)
-					//background-position: 20% 0%
 					background-size: 100%
 					height: 40vh;
 				@media screen and (max-width: 400px)

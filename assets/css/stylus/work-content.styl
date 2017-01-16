@@ -1,18 +1,24 @@
 .work
 	display: block
 	&-content
-		//padding: 0% 5%
-		// border: 3px solid #f55
 		width: 100%
 		min-height: 100%
 		display: flex
-		height:100vh
+		height:105vh
 		overflow: hidden
 		flex-wrap: nowrap
+		@media screen and (max-width: 650px) and (min-width: 300px)
+			display: block
+			li
+				display: block !important
+				height: calc(100%/3 - 2px) !important
+				width: 100% !important
+				div
+					margin: -15% auto !important
 		li
 			width: calc(100%/3 - 20px)
 			height: 100%
-			min-width: 20vh
+			min-width: 300px
 			max-height: 100%
 			margin: 0px
 			padding: 10px
@@ -25,23 +31,37 @@
 				&:nth-of-type(3)
 					color: #FFF
 			&:nth-of-type(1)
-				background-color: #eafb3fe6
+				background-color: rgba(252, 44, 96, 0.9)
+				div
+					img
+						height: 155px
+						width: 200px
+					@media screen and (max-width: 940px) and (min-width: 900px)
+						margin: 50% 25% auto
 			&:nth-of-type(2)
-				background-color: #FFF
+				background-color: #4c6bf3
+				div
+					img
+						height: 150px
+						width: 200px
 			&:nth-of-type(3)
-				background-color: #368bf7
+				background-color: #2f3133
 				div
 					margin: 42% 30% auto
 					img
-						height: 40px
+						height: 153px
+						width: 185px
+					@media screen and (max-width: 940px) and (min-width: 900px)
+						margin: 50% 25% auto
+				
 			&:hover
 				width:40%
 				box-shadow: 10px 10px 5px #888888
 			div
 				margin: 40% 30% auto
 				img
-					width: 150px
-					height: 70px
+					//width: 150px
+					//height: 70px
 					display: block
 					margin:  0 auto
 			div
