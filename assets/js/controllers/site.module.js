@@ -31,10 +31,11 @@ angular.module('site.module',[])
 	        		})
 				} else {
 					scrolled = scrolled + 500;
+					var mediaquery = (window.matchMedia("(max-width: 974px) and (max-height:680px)")) ? '-22%' : '-10%'  
 		        	$(".experince").stop().animate({
 		            	scrollTop: scrolled
 		        	}, function (){
-		        		$(".scroll-down").animate({bottom:'-10%'}).before(function(){
+		        		$(".scroll-down").animate({bottom: mediaquery}).before(function(){
 		        			$(this).css({transform:'rotate(180deg)'});
 		        		})
 		        	});
