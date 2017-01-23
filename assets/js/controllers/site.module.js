@@ -1,6 +1,12 @@
 angular.module('site.module',[])
-	.controller('about.controller', ['$scope', function ($scope) {
+	.controller('about.controller', ['$scope','servicesFactory', function ($scope, servicesFactory) {
 		$(document).ready( function () {
+
+			var isMobile = servicesFactory.isMobile();
+			if (!isMobile) {
+				$('.about-me__character').css('overflow','hidden')
+			}
+
 			$('.icon-plus').on('click', function () {
 				var icon =  $(this);
 				var element = $(this).attr("href");
