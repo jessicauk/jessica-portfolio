@@ -20,7 +20,7 @@
 			width:100%
 			position: absolute
 			top: 0
-			left: 100%
+			//left: 100%
 			z-index: 3
 			background-size: cover
 			background-position: 50% 50%
@@ -85,11 +85,12 @@
 				margin-left: 30%
 		input[id^="slide"]:checked + .slide
 			left: 0
-			//z-index: 4
 			opacity: 1
 			transform: translateY(0)
 			transition: left .65s ease-out, opacity 5s, transform .5s
 			//transition: left .65s ease-out
+			&:not([id^="slide"]:checked + .slide)
+				left: 0px
 		.about-me__myself
 			border-radius: 0
 			h2
