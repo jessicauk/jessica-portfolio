@@ -11,8 +11,10 @@
 		@media screen and (max-width: 768px) and (min-width: 300px)
 			margin: 0% auto
 			width: 90%
-		@media screen and (max-width: 554px)
-			overflow-y: auto
+		/*@media screen and (max-width: 554px)
+			overflow-y: visible !important
+			overflow-x: hidden !important*/
+			//overflow: hidden
 		article
 			height: 100%
 			width:100%
@@ -32,14 +34,16 @@
 				margin: 46% auto
 				padding: 0em 1em 0
 				margin-bottom: 0%
+			@media only screen and (min-width: 400px)
+				left: 0
 		.experince
-			overflow-y: scroll
+			//overflow-y: scroll
 			height: 50%
 			@media screen and (max-width: 974px) and (max-height: 680px)
 				height: 55%
 			@media screen and (max-width: 768px) and (min-width: 300px)
 				height: 100%
-				overflow: scroll
+				overflow: visible
 			.scroll-down
 				width: 35px
 				height: 35px
@@ -122,7 +126,9 @@
 						&:first-child
 							text-align: center
 				@media screen and (max-width: 550px)
-					margin-top: 200px	
+					margin-top: 200px
+				@media screen and (min-width: 350px)
+					margin-top: 100px	
 			.photograph
 				position: absolute
 				width: 200px
@@ -161,6 +167,9 @@
 					border-radius: 50%
 					margin: 0 auto
 					border: 6px solid #FFF
+					@media screen and (max-width: 400px)
+						width: 100px
+						height: 100px
 		article
 			h2
 				font-size: 30px

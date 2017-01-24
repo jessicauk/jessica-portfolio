@@ -1,10 +1,18 @@
 angular.module('site.module',[])
 	.controller('about.controller', ['$scope','servicesFactory', function ($scope, servicesFactory) {
 		$(document).ready( function () {
-
+			//validate device browser in order to apply scroll
 			var isMobile = servicesFactory.isMobile();
 			if (!isMobile) {
-				$('.about-me__character').css('overflow','hidden')
+				$('.about-me__character').css('overflow','hidden');
+			} else {
+				var isVisibleScroll = window.matchMedia('(max-width: 736px) and (min-width: 300px)');
+				if (isVisibleScroll) {
+					$('.about-me__character').css('overflow','visible');
+					$('.scroll-down').css('display', 'none');
+				} else {
+					$('.about-me__character').css('overflow','hidden');
+				}
 			}
 
 			$('.icon-plus').on('click', function () {
@@ -14,15 +22,15 @@ angular.module('site.module',[])
 				$(icon).toggleClass('icon-rotate');
 			});
 
-			$(window).scroll(function () {
+			/*$(window).scroll(function () {
 				var valorScroll = $(window).scrollTop();
-				console.log(scrol_pos + " scrol_before")
+				console.log(valorScroll + " scrol_before")
 				while(valorScroll>50){
 					console.log(valorScroll + " scrol_afer")
 				}
 				console.log(scrol_pos + " scrol_pos")
 				
-			})
+			})*/
 
 			var scrolled = 0;
 			$scope.scrollFnc = function () {
