@@ -56,13 +56,23 @@ angular.module('portfolioApp',['ui.router','site.module','services.module', 'mus
 					controller: 'prueba.controller'
 				})
 	}])
-	.controller('mainController', ['$scope', '$rootScope', '$http', function ( $scope, $rootScope, $http ) {
+	.controller('mainController', ['$scope', '$rootScope', '$http', 'servicesFactory', function ( $scope, $rootScope, $http, servicesFactory ) {
 		$scope.message = $rootScope.mensaje;
 		$scope.resizeText = true;
 			$(document).ready(function () {
 				$('#about').on("click", function() {
 					var p = $('#about').position();
 				});
+				var isMobile = servicesFactory.isMobile();
+				if (isMobile) {
+					var mediaForDevice = window.matchMedia("(max-width: 600px) and (min-width: 500px)")
+					if (mediaForDevice) {
+						alert("MOVIL")
+						document.getElementById('header1').style.paddingTop = '0px';
+						document.getElementById('header3').style.paddingTop = '0px';
+					}
+				}
+
 				$(window).resize(function () {
 					$sizeBlock = window.matchMedia("(max-width: 500px)");
 					//$responsiveM = window.matchMedia("(max-width: 768px)");
