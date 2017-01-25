@@ -64,14 +64,7 @@ angular.module('portfolioApp',['ui.router','site.module','services.module', 'mus
 					var p = $('#about').position();
 				});
 				var isMobile = servicesFactory.isMobile();
-				if (isMobile) {
-					var mediaForDevice = window.matchMedia("(max-width: 600px) and (min-width: 500px)")
-					if (mediaForDevice) {
-						alert("MOVIL")
-						document.getElementById('header1').style.paddingTop = '0px';
-						document.getElementById('header3').style.paddingTop = '0px';
-					}
-				}
+				
 
 				$(window).resize(function () {
 					$sizeBlock = window.matchMedia("(max-width: 500px)");
@@ -89,11 +82,21 @@ angular.module('portfolioApp',['ui.router','site.module','services.module', 'mus
 						}
 
 					}
-				})
+
+					if (isMobile) {
+					var mediaForDevice = window.matchMedia("(max-width: 600px) and (min-width: 500px)")
+					if (mediaForDevice.matches) {
+						/*document.getElementById('header1').style.paddingTop = '5%';
+						document.getElementById("header3").style.paddingTop = '14%';
+						document.getElementById("header1").style.paddingTop = "50px";*/
+						$('#header1').css('padding-top','5%');
+						$('#header13').css('padding-top','14%');
+					}
+				}
 
 				$(window).scroll(function () {
 					var scrol_pos = $(window).scrollTop();
-					console.log(scrol_pos + " scrol_pos")
+					//console.log(scrol_pos + " scrol_pos")
 					if(scrol_pos > 60){
 						angular.element('.main-block:even').addClass('animate1')
 					}else{
@@ -105,6 +108,9 @@ angular.module('portfolioApp',['ui.router','site.module','services.module', 'mus
 					}else{
 						angular.element('.main-block:odd').removeClass('animate2');
 					}
+				})
+
+
 				})
 			})	
 	}])
