@@ -6,9 +6,10 @@ angular.module('site.module',[])
 			if (!isMobile) {
 				$('.about-me__character').css('overflow','hidden');
 			} else {
-				var isVisibleScroll = window.matchMedia('(max-width: 736px) and (min-width: 300px)');
+				var isVisibleScroll = window.matchMedia('(max-width:700px) and (min-width: 300px)');
 				if (isVisibleScroll) {
-					$('.about-me__character').css('overflow','visible');
+					$('.about-me__character').css('overflow','scroll');
+					//$('.experince').css('overflow','visible');
 					$('.scroll-down').css('display', 'none');
 				} else {
 					$('.about-me__character').css('overflow','hidden');

@@ -69,7 +69,7 @@ angular.module('portfolioApp',['ui.router','site.module','services.module', 'mus
 				$(window).resize(function () {
 					$sizeBlock = window.matchMedia("(max-width: 500px)");
 					//$responsiveM = window.matchMedia("(max-width: 768px)");
-					if($sizeBlock.matches) {
+					/*if($sizeBlock.matches) {
 						if(scrol_pos > 155){
 							angular.element('.main-block:even').addClass('animate1')
 						}else{
@@ -81,7 +81,7 @@ angular.module('portfolioApp',['ui.router','site.module','services.module', 'mus
 							angular.element('.main-block:odd').removeClass('animate2');
 						}
 
-					}
+					}*/
 
 					if (isMobile) {
 					var mediaForDevice = window.matchMedia("(max-width: 600px) and (min-width: 500px)")
@@ -94,7 +94,7 @@ angular.module('portfolioApp',['ui.router','site.module','services.module', 'mus
 					}
 				}
 
-				$(window).scroll(function () {
+				/*$(window).scroll(function () {
 					var scrol_pos = $(window).scrollTop();
 					//console.log(scrol_pos + " scrol_pos")
 					if(scrol_pos > 60){
@@ -104,11 +104,11 @@ angular.module('portfolioApp',['ui.router','site.module','services.module', 'mus
 					}
 
 					if(scrol_pos > 252){
-						angular.element('.main-block:odd').addClass('animate2')
+						angular.s('.main-block:odd').addClass('animate2')
 					}else{
 						angular.element('.main-block:odd').removeClass('animate2');
 					}
-				})
+				})*/
 
 
 				})
